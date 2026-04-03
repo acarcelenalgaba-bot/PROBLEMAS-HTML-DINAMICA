@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 15px; background: #ffffff; overflow: hidden; }
+        
+        .canvas { position: relative; height: 220px; background: #0b0c10; border-radius: 12px; margin-bottom: 25px; display: flex; align-items: center; box-shadow: inset 0 0 25px rgba(0,0,0,0.9); overflow: visible;}
+        
+        .jup { width: 160px; height: 160px; background: radial-gradient(circle, #e67e22, #d35400); border-radius: 50%; position: absolute; left: 10px; box-shadow: 0 0 25px rgba(230,126,34,0.5); }
+        .gan { width: 40px; height: 40px; background: radial-gradient(circle, #ced4da, #7f8c8d); border-radius: 50%; position: absolute; right: 25px; box-shadow: 0 0 10px rgba(189,195,199,0.3); }
+        .ast { width: 14px; height: 14px; background: #ef233c; border-radius: 50%; position: absolute; z-index: 5; transition: left 0.1s ease-out; box-shadow: 0 0 5px #ef233c; }
+        
+        /* DISEÑO CORREGIDO DE FLECHAS DINÁMICAS */
+        .vector-body { position: absolute; top: 5px; height: 4px; transition: width 0.1s ease-out; }
+        .arrowhead { position: absolute; top: -6px; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+        
+        /* Vector Júpiter (Apunta a la izquierda, crece hacia la izquierda) */
+        #vec-j { right: 100%; background: #f1c40f; box-shadow: 0 0 5px #f1c40f; }
+        #vec-j .arrowhead { left: -12px; border-right: 12px solid #f1c40f; border-left: none; }
+
+        /* Vector Ganímedes (Apunta a la derecha, crece hacia la derecha) */
+        #vec-g { left: 100%; background: #3498db; box-shadow: 0 0 5px #3498db; }
+        #vec-g .arrowhead { right: -12px; border-left: 12px solid #3498db; border-right: none; }
+        
+        /* Controles y UI */
+        .controls { display: flex; align-items: center; gap: 20px; justify-content: center; background: #f1f3f5; padding: 25px; border-radius: 12px; border: 1px solid #e0e0e0; margin-bottom: 20px; flex-wrap: wrap;}
+        .controls label { font-weight: bold; color: #2c3e50; font-size: 1.15em;}
+        input[type=range] { flex-grow: 1; min-width: 250px; cursor: pointer; accent-color: #ef233c; height: 8px;}
+        input[type=number] { width: 140px; padding: 12px; border: 2px solid #bdc3c7; border-radius: 8px; font-weight: bold; text-align: center; font-size: 1.3em; color: #2b2d42; transition: 0.2s;}
+        input[type=number]:focus { outline: none; border-color: #ef233c; }
+        
+        .ui { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center; }
+        .card { background: #ffffff; padding: 20px; border-radius: 10px; border: 2px solid #ecf0f1; box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
+        .res { font-weight: bold; font-size: 1.6em; color: #2b2d42; display: block; margin-top: 10px; }
+        #msg { text-align: center; font-weight: bold; font-size: 1.4em; height: 45px; margin-top: 20px; display: flex; align-items: center; justify-content: center; border-radius: 10px;}
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="jup"></div>
+        <div class="ast" id="ast">
+            <div id="vec-j" class="vector-body">
+                <div class="arrowhead"></div>
+            </div>
+            <div id="vec-g" class="vector-body">
+                <div class="arrowhead"></div>
+            </div>
+        </div>
+        <div class="gan"></div>
+    </div>
+    
+    <div class="controls">
+        <label>Distancia a Ganímedes (x) en metros:</label>
+        <input type="range" id="rng" min="2000" max="40000" step="10" value="15000">
+        <input type="number" id="num" min="100" max="1200000" value="15000">
+    </div>
+
+    <div class="ui">
+        <div class="card" style="border-bottom: 5px solid #f1c40f;">Fuerza hacia Júpiter (F<sub>J</sub>)<span id="fj" class="res"></span></div>
+        <div class="card" style="border-bottom: 5px solid #3498db;">Fuerza hacia Ganímedes (F<sub>G</sub>)<span id="fg" class="res"></span></div>
+    </div>
+    
+    <div id="msg">Arrastra el deslizador o escribe para buscar el equilibrio</div>
+
+    <script>
+        const G = 6.67e-11, Mj = 1.889e27, Mg = 1.482e23, m = 100, d = 1.2e6;
+        const rng = document.getElementById('rng'), num = document.getElementById('num');
+        const ast = document.getElementById('ast'), vecJ = document.getElementById('vec-j'), vecG = document.getElementById('vec-g');
+        const fjTxt = document.getElementById('fj'), fgTxt = document.getElementById('fg'), msg = document.getElementById('msg');
+
+        // Fuerza de referencia en el punto de equilibrio (~8.9 millones de Newtons)
+        const FUERZA_REF = 8905397; 
+
+        function calc(source) {
+            let x = source === 'rng' ? parseFloat(rng.value) : parseFloat(num.value);
+            if(isNaN(x)) return;
+            
+            if(x <= 100) x = 100;
+            if(x >= d - 100) x = d - 100;
+
+            if(source === 'rng') num.value = Math.round(x);
+            else if(x >= rng.min && x <= rng.max) rng.value = x;
+
+            const distJ = d - x;
+            const Fj = (G * Mj * m) / Math.pow(distJ, 2);
+            const Fg = (G * Mg * m) / Math.pow(x, 2);
+            
+            fjTxt.innerHTML = Fj.toLocaleString('es-ES', {maximumFractionDigits: 0}) + ' N';
+            fgTxt.innerHTML = Fg.toLocaleString('es-ES', {maximumFractionDigits: 0}) + ' N';
+            
+            let visX = Math.min(Math.max(x, 2000), 40000);
+            const pos = 88 - (visX / 45000) * 80; 
+            ast.style.left = pos + '%';
+            
+            // LA MAGIA ESTÁ AQUÍ: Escalado correcto de las flechas.
+            // Si la fuerza es igual a la de referencia, la flecha mide 70px.
+            // Tope máximo visual de 150px, tope mínimo de 5px.
+            const longitudJ = Math.min(Math.max((Fj / FUERZA_REF) * 70, 5), 150);
+            const longitudG = Math.min(Math.max((Fg / FUERZA_REF) * 70, 5), 150);
+            
+            vecJ.style.width = longitudJ + 'px';
+            vecG.style.width = longitudG + 'px';
+
+            const diff = Math.abs(Fj - Fg);
+            if(diff < Math.min(Fj, Fg) * 0.00000005 || (x > 10535 && x < 10537)) { 
+                msg.innerText = "🎯 ¡PUNTO DE FUERZA NULA ALCANZADO!"; 
+                msg.style.backgroundColor = "#d4edda"; msg.style.color = "#155724"; msg.style.border = "1px solid #c3e6cb";
+            } else if (Fj > Fg) {
+                msg.innerText = "⬅️ Júpiter atrae con más fuerza";
+                msg.style.backgroundColor = "transparent"; msg.style.color = "#7f8c8d"; msg.style.border = "none";
+            } else {
+                msg.innerText = "Ganímedes atrae con más fuerza ➡️";
+                msg.style.backgroundColor = "transparent"; msg.style.color = "#7f8c8d"; msg.style.border = "none";
+            }
+        }
+        
+        rng.addEventListener('input', () => calc('rng'));
+        num.addEventListener('input', () => calc('num'));
+        calc('rng');
+    </script>
+</body>
+</html>
