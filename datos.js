@@ -316,12 +316,12 @@ const baseDatosProblemas = {
         {
             titulo: "Problema 7: Rayo McQueen",
             enunciado: "Rayo McQueen está en la final de la Copa Pistón. Para ganar la carrera, debe optimizar la velocidad con la que toma la curva más peligrosa el circuito. Esta curva tiene un radio de 150 m y está peraltada 15◦ . Gracias a los neumáticos estriados de Luigi, el rozamiento entre el neumático y el asfalto es de 0,7. Determina la velocidad máxima en km/h con la que Rayo McQueen puede tomar la curva.",
-            // solucion: `
-            //     <div class='paso'>
-            //         \\[ v = \\sqrt{R \\cdot g \\cdot \\tan(\\alpha)} = \\sqrt{150 \\cdot 9,8 \\cdot \\tan(15^\\circ)} \\]<br>
-            //         <span class='resultado'>Velocidad óptima v = 19,84 m/s</span>
-            //     </div>
-            // `
+            solucion: `
+                <div class='paso'>
+                    \\[ v = \\sqrt{R \\cdot g \\cdot \\tan(\\alpha)} = \\sqrt{150 \\cdot 9,8 \\cdot \\tan(15^\\circ)} \\]<br>
+                    <span class='resultado'>Velocidad óptima v = 19,84 m/s</span>
+                </div>
+            `
         }
     ],
     "electrica": [
