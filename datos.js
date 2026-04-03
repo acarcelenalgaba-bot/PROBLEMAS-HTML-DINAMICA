@@ -292,24 +292,59 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 5: Coche en curva peraltada",
-            enunciado: "Un coche circula sobre una curva peraltada de 60 m de radio que presenta una inclinación de 5◦. El coeficiente de rozamiento entre el neumático y el suelo es de 0,55. Determina: <br>  a) La velocidad máxima que puede llevar el vehículo en la curva. <br>  b) Discute la importancia del desgaste del estriado en el neumático.",
+            enunciado: "Un coche circula sobre una curva peraltada de 60 m de radio que presenta una inclinación de 5º. El coeficiente de rozamiento entre el neumático y el suelo es de 0,55. Determina: <br>  a) La velocidad máxima que puede llevar el vehículo en la curva. <br>  b) Discute la importancia del desgaste del estriado en el neumático.",
             solucion: `
                 <div class='paso'>
-                    <strong>a) Velocidad máxima:</strong><br>
-                    \\[ v_{max} = \\sqrt{60 \\cdot 9,8 \\frac{\\sin(5^\\circ) + 0,55 \\cos(5^\\circ)}{\\cos(5^\\circ) - 0,55 \\sin(5^\\circ)}} \\]<br>
-                    <span class='resultado'>Velocidad v = 19,84 m/s</span>
+                    <strong>a) Análisis de fuerzas y ecuaciones:</strong><br>
+                    Las fuerzas que actúan sobre el coche son el peso \\(P = m \\cdot g\\), la fuerza normal \\(N\\) perpendicular al peralte, y la fuerza de rozamiento \\(f_r\\).<br>
+                    Para calcular la velocidad máxima, asumimos que el vehículo está al límite de deslizar hacia el exterior de la curva, por lo que la fuerza de rozamiento apunta hacia el interior (hacia abajo del plano inclinado).<br>
+                    Descomponemos las fuerzas en los ejes Y (vertical) y X (horizontal, apuntando hacia el centro de la curva):<br>
+                    - <strong>Eje Y (Equilibrio vertical):</strong> \\(N\\cos\\theta - f_r\\sin\\theta - m \\cdot g = 0\\). Como el rozamiento es máximo, \\(f_r = \\mu \\cdot N\\), quedando \\(N(\\cos\\theta - \\mu\\sin\\theta) = m \\cdot g\\).<br>
+                    - <strong>Eje X (Fuerza centrípeta):</strong> \\(N\\sin\\theta + f_r\\cos\\theta = m \\cdot \\frac{v^2}{R}\\). Sustituyendo el rozamiento, queda \\(N(\\sin\\theta + \\mu\\cos\\theta) = m \\cdot \\frac{v^2}{R}\\).
                 </div>
-            `
+                <div class='paso'>
+                    <strong>Cálculo de la velocidad máxima:</strong><br>
+                    Dividimos la ecuación del eje X entre la del eje Y. Fíjate que la masa (\\(m\\)) y la normal (\\(N\\)) se cancelan, demostrando que la velocidad máxima es independiente del peso del coche:<br>
+                    \\[\\frac{\\sin\\theta + \\mu\\cos\\theta}{\\cos\\theta - \\mu\\sin\\theta} = \\frac{v^2}{R \\cdot g}\\]<br>
+                    Dividiendo todo el lado izquierdo entre \\(\\cos\\theta\\) para simplificar (recordando que \\(\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}\\)), obtenemos la fórmula general:<br>
+                    \\[v_{max} = \\sqrt{R \\cdot g \\cdot \\frac{\\tan\\theta + \\mu}{1 - \\mu\\tan\\theta}}\\]<br>
+                    Sustituimos los datos del problema: \\(R = 60\\) m, \\(g = 9,8 \\text{ m/s}^2\\), \\(\\theta = 5^\\circ\\), \\(\\mu = 0,55\\):<br>
+                    \\[v_{max} = \\sqrt{60 \\cdot 9,8 \\cdot \\frac{\\tan(5^\\circ) + 0,55}{1 - 0,55 \\cdot \\tan(5^\\circ)}} = \\sqrt{588 \\cdot \\frac{0,0875 + 0,55}{1 - 0,0481}} = \\sqrt{588 \\cdot 0,6697}\\]<br>
+                    <span class='resultado'>Resultado:  &nbsp \\(v_{max} = 19,84 \\text{ m/s}\\) (aprox. 71,4 km/h)</span>
+                </div>
+                <div class='paso'>
+                    <strong>b) Importancia del desgaste del estriado:</strong><br>
+                    El estriado (los surcos o el dibujo) del neumático tiene la función vital de evacuar el agua, la tierra y otras impurezas de la calzada. Si el neumático está liso debido al desgaste, pierde por completo esta capacidad.<br>
+                    En condiciones de lluvia o asfalto sucio, se forma una película entre la rueda y el suelo (fenómeno conocido como <em>aquaplaning</em>), lo que reduce drásticamente el coeficiente de rozamiento (\\(\\mu\\)).<br>
+                    Si observamos la fórmula matemática que acabamos de deducir, al disminuir \\(\\mu\\) hacia cero, el numerador de la fracción cae drásticamente. Esto significa que la velocidad máxima segura para tomar la curva bajará de los 71 km/h a apenas unos 25 km/h. Por tanto, un estriado en buen estado es fundamental para mantener el coeficiente de rozamiento alto y evitar que el vehículo salga proyectado por la tangente de la curva.
+                </div>
+`
         },
         {
             titulo: "Problema 6: Moto de Cross",
-            enunciado: "Una moto de Cross toma una curva peraltada con un ángulo de 37◦ a 54 km/h. El coeficiente entre la tierra y el neumático es de μ = 0,3. Determina: <br> a) El radio mínimo de la curva para que la moto no sufra un accidente. <br> b) Si el radio de la curva es R=10, ¿qué sucederá?",
+            enunciado: "Una moto de Cross toma una curva peraltada con un ángulo de 37º a 54 km/h. El coeficiente entre la tierra y el neumático es de μ = 0,3. Determina: <br> a) El radio mínimo de la curva para que la moto no sufra un accidente. <br> b) Si el radio de la curva es R=10, ¿qué sucederá?",
             solucion: `
                 <div class='paso'>
-                    <strong>a) Radio mínimo:</strong><br>
-                    \\[ R_{min} = \\frac{15^2}{9,8} \\frac{\\cos(37^\\circ) - 0,3 \\sin(37^\\circ)}{\\sin(37^\\circ) + 0,3 \\cos(37^\\circ)} \\]<br>
-                    <span class='resultado'>Radio mínimo R = 16,86 m</span><br>
-                    <strong>b)</strong> Con 10m derrapará hacia afuera por falta de fuerza centrípeta suficiente.
+                    <strong>Paso previo: Cambio de unidades:</strong><br>
+                    Lo primero, como siempre, es pasar los datos al Sistema Internacional para no tener problemas con la gravedad. Convertimos la velocidad de la moto:<br>
+                    \\[ v = 54 \\text{ km/h} \\cdot \\frac{1000 \\text{ m}}{1 \\text{ km}} \\cdot \\frac{1 \\text{ h}}{3600 \\text{ s}} = 15 \\text{ m/s} \\]
+                </div>
+                <div class='paso'>
+                    <strong>a) Radio mínimo de la curva:</strong><br>
+                    Utilizamos el mismo análisis de fuerzas que en un coche sobre un peralte. Para que el motorista no derrape hacia el exterior, la fuerza de rozamiento (\\(f_r\\)) debe tirar de él hacia abajo del plano inclinado. La ecuación general que relaciona la velocidad, el radio, el ángulo del peralte y el rozamiento es:<br>
+                    \\[ \\frac{v^2}{R \\cdot g} = \\frac{\\sin\\theta + \\mu\\cos\\theta}{\\cos\\theta - \\mu\\sin\\theta} = \\frac{\\tan\\theta + \\mu}{1 - \\mu\\tan\\theta} \\]<br>
+                    En este caso, nuestra incógnita es el radio (\\(R\\)). Le damos la vuelta a la fracción y despejamos \\(R\\):<br>
+                    \\[ R_{min} = \\frac{v^2}{g} \\cdot \\frac{1 - \\mu\\tan\\theta}{\\tan\\theta + \\mu} \\]<br>
+                    Sustituimos los datos (\\(v = 15 \\text{ m/s}\\), \\(g = 9,8 \\text{ m/s}^2\\), \\(\\theta = 37^\\circ\\), \\(\\mu = 0,3\\)).<br>
+                    \\[ R_{min} = \\frac{15^2}{9,8} \\cdot \\frac{1 - 0,3 \\cdot 0,75}{0,75 + 0,3} = \\frac{225}{9,8} \\cdot \\frac{1 - 0,225}{1,05} \\]<br>
+                    \\[ R_{min} = 22,96 \\cdot \\frac{0,775}{1,05} = 22,96 \\cdot 0,738 \\]<br>
+                    <span class='resultado'>Resultado:  &nbsp \\(R_{min} = 16,94 \\text{ m}\\)</span>
+                </div>
+                <div class='paso'>
+                    <strong>b) ¿Qué sucederá si R = 10 m?</strong><br>
+                    Acabamos de calcular que, para que las ruedas aguanten a 54 km/h en ese peralte, el motorista necesita trazar una curva de al menos 16,94 metros de radio (una curva relativamente abierta).<br>
+                    Si la curva real del circuito tiene un radio de <strong>10 m</strong>, significa que es una curva demasiado cerrada para esa velocidad. La fuerza centrífuga (o inercia) superará la fuerza máxima de agarre que pueden proporcionar juntos el peralte y el rozamiento.<br>
+                    <span class='resultado'>Resultado:  &nbsp La moto no podrá mantenerse en la trayectoria y derrapará hacia el exterior de la curva, sufriendo una caída.</span>
                 </div>
             `
         },
@@ -318,8 +353,25 @@ const baseDatosProblemas = {
             enunciado: "Rayo McQueen está en la final de la Copa Pistón. Para ganar la carrera, debe optimizar la velocidad con la que toma la curva más peligrosa el circuito. Esta curva tiene un radio de 150 m y está peraltada 15◦ . Gracias a los neumáticos estriados de Luigi, el rozamiento entre el neumático y el asfalto es de 0,7. Determina la velocidad máxima en km/h con la que Rayo McQueen puede tomar la curva.",
             solucion: `
                 <div class='paso'>
-                    \\[ v = \\sqrt{R \\cdot g \\cdot \\tan(\\alpha)} = \\sqrt{150 \\cdot 9,8 \\cdot \\tan(15^\\circ)} \\]<br>
-                    <span class='resultado'>Velocidad óptima v = 19,84 m/s</span>
+                    <strong>Paso 1: Análisis de la situación en la Copa Pistón:</strong><br>
+                    Para que el Rayo McQueen tome la curva a la máxima velocidad posible sin derrapar hacia el muro exterior, la fuerza de rozamiento estático de sus neumáticos (gracias a Luigi) debe actuar hacia el interior del peralte.<br>
+                    Partimos de la fórmula general que ya hemos deducido para peraltes con rozamiento:<br>
+                    \\[ v_{max} = \\sqrt{R \\cdot g \\cdot \\frac{\\tan\\theta + \\mu}{1 - \\mu\\tan\\theta}} \\]
+                </div>
+                <div class='paso'>
+                    <strong>Paso 2: Sustitución de datos y cálculo matemático:</strong><br>
+                    Recopilamos los datos del circuito: radio \\(R = 150 \\text{ m}\\), gravedad \\(g = 9,8 \\text{ m/s}^2\\), ángulo \\(\\theta = 15^\\circ\\) y rozamiento \\(\\mu = 0,7\\).<br>
+                    Primero calculamos el valor de la tangente para simplificar: \\(\\tan(15^\\circ) \\approx 0,268\\).<br>
+                    Sustituimos en la ecuación:<br>
+                    \\[ v_{max} = \\sqrt{150 \\cdot 9,8 \\cdot \\frac{0,268 + 0,7}{1 - 0,7 \\cdot 0,268}} = \\sqrt{1470 \\cdot \\frac{0,968}{1 - 0,1876}} \\]<br>
+                    \\[ v_{max} = \\sqrt{1470 \\cdot \\frac{0,968}{0,8124}} = \\sqrt{1470 \\cdot 1,1915} = \\sqrt{1751,5} \\]<br>
+                    \\[ v_{max} \\approx 41,85 \\text{ m/s} \\]
+                </div>
+                <div class='paso'>
+                    <strong>Paso 3: Conversión a la unidad solicitada:</strong><br>
+                    El problema nos pide específicamente la velocidad en km/h, así que aplicamos el factor de conversión (multiplicar por 3,6):<br>
+                    \\[ v_{max \\text{ (km/h)}} = 41,85 \\text{ m/s} \\cdot 3,6 \\text{ km/h por m/s} = 150,66 \\text{ km/h} \\]<br>
+                    <span class='resultado'>Resultado: &nbsp El Rayo McQueen puede tomar la curva peligrosa a una velocidad máxima de 150,66 km/h. ¡Si supera esa velocidad, acabará contra el muro!</span>
                 </div>
             `
         }
