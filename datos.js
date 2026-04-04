@@ -401,7 +401,7 @@ const baseDatosProblemas = {
                     Para relacionar la fuerza eléctrica con el movimiento de la partícula, recurrimos a la Segunda Ley de Newton (\\( F = m \\cdot a \\)). Despejamos la aceleración usando la masa del electrón:<br>
                     \\[ a = \\frac{F}{m_e} = \\frac{9,24 \\cdot 10^{-8} \\text{ N}}{9,1 \\cdot 10^{-31} \\text{ kg}} \\]<br>
                     \\[ a \\approx 1,015 \\cdot 10^{23} \\text{ m/s}^2 \\]<br>
-                    <em>*Nota del profesor: Esta aceleración es brutalmente inmensa, lo cual es típico en física de partículas debido a que su masa es increíblemente pequeña.</em><br>
+                    <em>*Nota: Esta aceleración es brutalmente inmensa, lo cual es típico en física de partículas debido a que su masa es increíblemente pequeña.</em><br>
                     <span class='resultado'>Resultado:  &nbsp \\( a \\approx 1,015 \\cdot 10^{23} \\text{ m/s}^2 \\)</span>
                 </div>
                 <div class='paso'>
@@ -410,8 +410,8 @@ const baseDatosProblemas = {
                     Si queremos que la nueva fuerza sea \\( \\frac{F}{4} \\), el denominador de la fracción debe multiplicarse por 4.<br>
                     Para que \\( r^2 \\) se multiplique por 4, la propia distancia \\( r \\) debe multiplicarse por 2 (ya que \\( 2^2 = 4 \\)).<br>
                     Por tanto, la nueva distancia debe ser el doble de la original:<br>
-                    \\[ r' = 2 \\cdot r = 2 \\cdot 0,5 \\text{ \\AA} \\]<br>
-                    <span class='resultado'>Resultado:  &nbsp \\( r' = 1,0 \\text{ \\AA} \\) (o \\( 10^{-10} \\text{ m} \\))</span>
+                    \\[ r' = 2 \\cdot r = 2 \\cdot 0,5 \\text{ Å} \\]<br>
+                    <span class='resultado'>Resultado:  &nbsp \\( r' = 1,0 \\text{ Å} \\) (o \\( 10^{-10} \\text{ m} \\))</span>
                 </div>
             `
         },
