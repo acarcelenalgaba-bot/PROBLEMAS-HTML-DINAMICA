@@ -379,7 +379,7 @@ const baseDatosProblemas = {
     "electrica": [
         {
             titulo: "Problema 1: Fuerza en el deuterio",
-            enunciado: "El deuterio es el isótopo del hidrógeno que contiene un neutrón. El agua pesada \\( \\ce{D2O} \\) se emplea en los reactores nucleares para ralentizar los neutrones y controlar su crecimiento. Sabiendo que la distancia entre el protón y el electrón es de 0,5 Å, determina: </br> a) La fuerza eléctrica existente entre el protón y el electrón. <br> b) La aceleración inicial del electrón. <br> c) La distancia a la que debe situarse el electrón para reducir la fuerza de atracción a la cuarta parte. <br> Datos. \\( \\ce{k = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2} ; q_e = 1,602 \\cdot 10^{−19} C; q_p = 1,602 \\cdot 10^{−19} C; m_e = 9,1 \\cdot 10^{−31}  kg; 1 \\\ Å = 1 \\cdot 10^{-10}  m} \\) ",
+            enunciado: "El deuterio es el isótopo del hidrógeno que contiene un neutrón. El agua pesada \\( \\ce{D2O} \\) se emplea en los reactores nucleares para ralentizar los neutrones y controlar su crecimiento. Sabiendo que la distancia entre el protón y el electrón es de 0,5 Å, determina: </br> a) La fuerza eléctrica existente entre el protón y el electrón. <br> b) La aceleración inicial del electrón. <br> c) La distancia a la que debe situarse el electrón para reducir la fuerza de atracción a la cuarta parte. <br> Datos. \\( \\ce{k = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2} ; q_e = 1,602 \\cdot 10^{−19} C; q_p = 1,602 \\cdot 10^{−19} C; m_e = 9,1 \\cdot 10^{−31}  kg; 1 \\\ \\text{Å} = 1 \\cdot 10^{-10}  m} \\) ",
             solucion: `
                 <div class='paso'>
                     <strong>Paso previo: Unidades al Sistema Internacional y análisis:</strong><br>

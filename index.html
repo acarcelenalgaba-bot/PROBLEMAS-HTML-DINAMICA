@@ -130,7 +130,7 @@
                 <div id="contenido-problema">
                     <h2 id="titulo-visor"></h2>
                     <div id="texto-visor"></div>
-                    <div class="controles-solucion"><button id="btn-solucion" onclick="toggleSolucion()">Ver Solución Paso a Paso</button></div>
+                    <div class="controles-solucion"><button id="btn-solucion" onclick="toggleSolucion()">Ver Solución</button></div>
                     <div id="caja-solucion"></div>
                 </div>
             </div>
@@ -187,7 +187,7 @@
             if (solucionHTML) {
                 document.getElementById('caja-solucion').innerHTML = solucionHTML;
                 btn.style.display = 'inline-block';
-                btn.innerText = 'Ver Solución Paso a Paso';
+                btn.innerText = 'Ver Solución';
             } else {
                 btn.style.display = 'none';
             }
@@ -214,7 +214,7 @@
                 
             } else {
                 caja.style.display = 'none';
-                btn.innerText = 'Ver Solución Paso a Paso';
+                btn.innerText = 'Ver Solución';
             }
         }
 
