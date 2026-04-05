@@ -417,7 +417,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 2: Cargas en triángulo",
-            enunciado: "Tres cargas eléctricas de 5 nC, dos positivas fijas y una negativa libre, se sitúan en los vértices de un triángulo equilátero de 60 cm de lado. Sabiendo que la masa de la carga negativa es de 5 g, determina: <br> a) En que dirección comienza a moverse. <br> b) ¿Qué movimiento realiza la carga libre a lo largo del tiempo? <br> c) Calcula la fuerza que experimenta la carga libre en el vértice del triángulo. <br> d) Obtén la aceleración en dicho vértice. <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_6.png' style='max-width: 80%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> \\( \\ce{Datos: k = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}} \\)",
+            enunciado: "Tres cargas eléctricas de 5 nC, dos positivas fijas y una negativa libre, se sitúan en los vértices de un triángulo equilátero de 60 cm de lado. Sabiendo que la masa de la carga negativa es de 5 g, determina: <br> a) En que dirección comienza a moverse. <br> b) ¿Qué movimiento realiza la carga libre a lo largo del tiempo? <br> c) Calcula la fuerza que experimenta la carga libre en el vértice del triángulo. <br> d) Obtén la aceleración en dicho vértice. <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_6.png' style='max-width: 80%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> \\( \\ce{Datos: k = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}; 1 \\\ nC = 10^{-9} \\\ C } \\)",
             solucion: `
                 <div class='paso'>
                     <strong>Paso previo: Unidades al Sistema Internacional:</strong><br>
@@ -457,27 +457,86 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 3: Radiación cósmica",
-            enunciado: "La radiación cósmica tiene una influencia directa en nuestro planeta. La teoría más asentada sobre la formación de tormentas apunta a la radiación cósmica como origen de las mismas. En un laboratorio de nanotecnología, se investiga el comportamiento de partículas cargadas en dispositivos de detección de polvo cósmico. En un experimento, tres pequeñas esferas con carga están suspendidas en un campo eléctrico controlado según el siguiente esquema. Determina: <br> a) La fuerza que experimenta la carga 1. <br> b) La aceleración que experimenta la carga 1, cuya masa es de 10 g. <br> c) Indica qué bosones se intercambian en la interacción descrita. <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_7.png' style='max-width: 25%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>  <br> \\( \\ce{Datos: k = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}} \\)",
-            // solucion: `
-            //     <div class='paso'>
-            //         <strong>a)</strong> Atraída por q2 y q3. \\( F_{total} = F_{12} + F_{13} = 0,036 + 0,009 \\)<br>
-            //         <span class='resultado'>F = 0,045 N</span><br>
-            //         <strong>b)</strong> \\( a = F/m = 0,045 / 0,010 \\)<br>
-            //         <span class='resultado'>a = 4,5 m/s²</span><br>
-            //         <strong>c)</strong> Interacción electromagnética.<br>
-            //         <span class='resultado'>Bosones: Fotones</span>
-            //     </div>
-            // `
+            enunciado: "La radiación cósmica tiene una influencia directa en nuestro planeta. La teoría más asentada sobre la formación de tormentas apunta a la radiación cósmica como origen de las mismas. En un laboratorio de nanotecnología, se investiga el comportamiento de partículas cargadas en dispositivos de detección de polvo cósmico. En un experimento, tres pequeñas esferas con carga están suspendidas en un campo eléctrico controlado según el siguiente esquema. Determina: <br> a) La fuerza que experimenta la carga 1. <br> b) La aceleración que experimenta la carga 1, cuya masa es de 10 g. <br> c) Indica qué bosones se intercambian en la interacción descrita. <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_7.png' style='max-width: 25%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>  <br> \\( \\ce{Datos: k = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}; 1 \\\ \\mu \\text{C} = 10^{-6} \\\ \\text{C} }\\)",
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Análisis geométrico previo:</strong><br>
+                    Observando el esquema, tenemos un sistema simétrico. La carga positiva \\(q_1\\) es atraída por las cargas negativas \\(q_2\\) y \\(q_3\\).<br>
+                    Conocemos la distancia entre las cargas (la hipotenusa del triángulo formado, \\( r = 3,5 \\text{ m} \\)) y la altura vertical respecto al eje X (\\( y = 1,5 \\text{ m} \\)).<br>
+                    Calculamos la distancia en el eje X (cateto contiguo) usando el Teorema de Pitágoras:<br>
+                    \\[ x = \\sqrt{r^2 - y^2} = \\sqrt{3,5^2 - 1,5^2} = \\sqrt{12,25 - 2,25} = \\sqrt{10} \\approx 3,16 \\text{ m} \\]<br>
+                    Con esto, extraemos el coseno del ángulo \\(\\alpha\\) (ángulo entre la fuerza y el eje X), que usaremos para proyectar los vectores:<br>
+                    \\[ \\cos(\\alpha) = \\frac{\\text{cateto contiguo}}{\\text{hipotenusa}} = \\frac{\\sqrt{10}}{3,5} \\approx 0,9035 \\]
+                </div>
+                <div class='paso'>
+                    <strong>a) Fuerza que experimenta la carga 1:</strong><br>
+                    Primero, calculamos el módulo de la fuerza de atracción entre \\(q_1\\) y \\(q_2\\) (Ley de Coulomb). Al tener \\(q_3\\) la misma carga y estar a la misma distancia, la fuerza \\(F_{31}\\) será idéntica en módulo.<br>
+                    Pasamos las cargas a Culombios: \\( 3  \\mu \\text{ C} = 3 \\cdot 10^{-6} \\text{ C} \\).<br>
+                    \\[ F_{21} = k \\cdot \\frac{|q_1 \\cdot q_2|}{r^2} = 9 \\cdot 10^9 \\cdot \\frac{(3 \\cdot 10^{-6}) \\cdot (3 \\cdot 10^{-6})}{(3,5)^2} \\]<br>
+                    \\[ F_{21} = 9 \\cdot 10^9 \\cdot \\frac{9 \\cdot 10^{-12}}{12,25} = \\frac{0,081}{12,25} \\approx 6,612 \\cdot 10^{-3} \\text{ N} \\]<br>
+                    Por simetría, las componentes en el eje Y se anulan (una tira hacia arriba y otra hacia abajo con la misma intensidad). Las componentes en el eje X se suman:<br>
+                    \\[ F_{total} = 2 \\cdot F_{21x} = 2 \\cdot F_{21} \\cdot \\cos(\\alpha) = 2 \\cdot (6,612 \\cdot 10^{-3}) \\cdot 0,9035 \\]<br>
+                    <span class='resultado'>Resultado: &nbsp \\( F_{total} \\approx 1,195 \\cdot 10^{-2} \\text{ N} \\) (dirigida hacia la derecha, en el eje X positivo)</span>
+                </div>
+                <div class='paso'>
+                    <strong>b) Aceleración que experimenta la carga 1:</strong><br>
+                    Aplicamos la Segunda Ley de Newton. Pasamos la masa al Sistema Internacional: \\( m = 10 \\text{ g} = 0,01 \\text{ kg} \\).<br>
+                    \\[ a = \\frac{F_{total}}{m} = \\frac{1,195 \\cdot 10^{-2} \\text{ N}}{0,01 \\text{ kg}} \\]<br>
+                    <span class='resultado'>Resultado: &nbsp \\( a = 1,195 \\text{ m/s}^2 \\) (hacia la derecha)</span>
+                </div>
+                <div class='paso'>
+                    <strong>c) Bosones que se intercambian:</strong><br>
+                    Esta es una pregunta teórica pura del Modelo Estándar de la física de partículas. Las fuerzas eléctricas y magnéticas son manifestaciones de la interacción electromagnética.<br>
+                    <span class='resultado'>Resultado: &nbsp La partícula mediadora (bosón de gauge) responsable de la interacción electromagnética es el <strong>fotón</strong>.</span>
+                </div>
+            `
         },
         {
             titulo: "Problema 4: 1-bromopropano",
-            enunciado: "El 1-bromopropano es un disolvente empleado para limpiar las superficies de las pantallas OLEDs. Para formar el 1-bromopropano se lleva a cabo una reacción orgánica donde el ion bromuro \\( \\ce{Br^–} \\) ataca la carga positiva del carbocatión (propano). El ion bromuro se encuentra rodeado de 3 cargas positivas (carbocationes). En los siguientes esquemas se muestran tanto la reacción orgánica (1) como un diagrama de cargas (2). Determina: <br> a) La fuerza que experimenta la carga 1. <br> b) La fuerza que experimenta la carga 4. <br> c) La aceleración que experimenta la carga 1 (ion bromuro), cuya masa es de 1,33 · 10 – 22 g. <br> d) Teniendo en cuenta el diagrama de fuerzas, ¿a qué carbocatión crees que se unirá el bromuro? <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_8.png' style='max-width: 70%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>  <br> \\( \\ce{Datos: k = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}} \\)",
-            // solucion: `
-            //     <div class='paso'>
-            //         <span class='comentario'>Se aplican las sumatorias de fuerza Coulombianas sobre las distintas distancias de los carbonos.</span><br>
-            //         <span class='resultado'>a = 4,16 · 10¹⁴ m/s²</span>
-            //     </div>
-            // `
+            enunciado: "El 1-bromopropano es un disolvente empleado para limpiar las superficies de las pantallas OLEDs. Para formar el 1-bromopropano se lleva a cabo una reacción orgánica donde el ion bromuro \\( \\ce{Br^–} \\) ataca la carga positiva del carbocatión (propano). El ion bromuro se encuentra rodeado de 3 cargas positivas (carbocationes). En los siguientes esquemas se muestran tanto la reacción orgánica (1) como un diagrama de cargas (2). Determina: <br> a) La fuerza que experimenta la carga 1. <br> b) La fuerza que experimenta la carga 4. <br> c) La aceleración que experimenta la carga 1 (ion bromuro), cuya masa es de 1,33 · 10 – 22 g. <br> d) Teniendo en cuenta el diagrama de fuerzas, ¿a qué carbocatión crees que se unirá el bromuro? <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_8.png' style='max-width: 70%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>  <br> \\( \\ce{Datos: k = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}; 1 \\text{ nm} = 1 \\cdot 10^{-9} \\text{ m}} \\)",
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Análisis geométrico y paso a unidades del S.I.:</strong><br>
+                    Primero, pasamos todas las unidades al Sistema Internacional:<br>
+                    - Cargas: \\( q_1 = -1 \\cdot 10^{-19} \\text{ C} \\), \\( q_2 = q_3 = q_4 = 0,8 \\cdot 10^{-19} \\text{ C} \\)<br>
+                    - Distancias: \\( d_{12} = d_{13} = 2 \\text{ nm} = 2 \\cdot 10^{-9} \\text{ m} \\). La distancia vertical entre \\(q_2\\) y \\(q_4\\) es \\( 1 \\text{ nm} = 1 \\cdot 10^{-9} \\text{ m} \\).<br>
+                    - Masa de \\(q_1\\): \\( m = 1,33 \\cdot 10^{-22} \\text{ g} = 1,33 \\cdot 10^{-25} \\text{ kg} \\).<br>
+                    Necesitamos la distancia horizontal desde \\(q_1\\) hasta \\(q_4\\) (llamémosla \\(x\\)). Usamos el Teorema de Pitágoras en el triángulo formado por \\(q_1\\), \\(q_4\\) y \\(q_2\\):<br>
+                    \\[ x^2 + (1 \\cdot 10^{-9})^2 = (2 \\cdot 10^{-9})^2 \\implies x^2 + 1 \\cdot 10^{-18} = 4 \\cdot 10^{-18} \\]<br>
+                    \\[ x = \\sqrt{3 \\cdot 10^{-18}} = \\sqrt{3} \\cdot 10^{-9} \\text{ m} \\approx 1,732 \\cdot 10^{-9} \\text{ m} \\]<br>
+                    Esta es la distancia \\(r_{14}\\). Además, el coseno del ángulo \\(\\alpha\\) que forma la fuerza de \\(q_2\\) con la horizontal es: \\( \\cos(\\alpha) = \\frac{cateto\\ contiguo}{hipotenusa} = \\frac{\\sqrt{3}}{2} \\).
+                </div>
+                <div class='paso'>
+                    <strong>a) Fuerza que experimenta la carga 1 (ion bromuro):</strong><br>
+                    Calculamos la fuerza atractiva que ejerce \\(q_2\\) sobre \\(q_1\\):<br>
+                    \\[ F_{21} = k \\cdot \\frac{|q_1 \\cdot q_2|}{r_{12}^2} = 9 \\cdot 10^9 \\cdot \\frac{1 \\cdot 10^{-19} \\cdot 0,8 \\cdot 10^{-19}}{(2 \\cdot 10^{-9})^2} = 9 \\cdot 10^9 \\cdot \\frac{0,8 \\cdot 10^{-38}}{4 \\cdot 10^{-18}} = 1,8 \\cdot 10^{-11} \\text{ N} \\]<br>
+                    Por simetría, la fuerza que ejerce \\(q_3\\) es igual: \\( F_{31} = 1,8 \\cdot 10^{-11} \\text{ N} \\).<br>
+                    Las componentes Y se anulan. Las componentes X se suman: \\( F_{21x} + F_{31x} = 2 \\cdot F_{21} \\cdot \\cos(\\alpha) = 2 \\cdot 1,8 \\cdot 10^{-11} \\cdot \\frac{\\sqrt{3}}{2} \\approx 3,118 \\cdot 10^{-11} \\text{ N} \\).<br>
+                    Calculamos la fuerza directa que ejerce el carbocatión central \\(q_4\\) (es puramente horizontal):<br>
+                    \\[ F_{41} = k \\cdot \\frac{|q_1 \\cdot q_4|}{r_{14}^2} = 9 \\cdot 10^9 \\cdot \\frac{1 \\cdot 10^{-19} \\cdot 0,8 \\cdot 10^{-19}}{(\\sqrt{3} \\cdot 10^{-9})^2} = 9 \\cdot 10^9 \\cdot \\frac{0,8 \\cdot 10^{-38}}{3 \\cdot 10^{-18}} = 2,4 \\cdot 10^{-11} \\text{ N} \\]<br>
+                    Sumamos todo el empuje horizontal:<br>
+                    \\[ F_{total\_1} = 3,118 \\cdot 10^{-11} + 2,4 \\cdot 10^{-11} = 5,518 \\cdot 10^{-11} \\text{ N} \\]<br>
+                    <span class='resultado'>Resultado: &nbsp \\( F_1 \\approx 5,52 \\cdot 10^{-11} \\text{ N} \\) (hacia la derecha)</span>
+                </div>
+                <div class='paso'>
+                    <strong>b) Fuerza que experimenta la carga 4:</strong><br>
+                    Sobre la carga \\(q_4\\) actúan tres fuerzas: la repulsión de \\(q_2\\) (hacia abajo), la repulsión de \\(q_3\\) (hacia arriba) y la atracción de \\(q_1\\) (hacia la izquierda).<br>
+                    Por simetría pura, como \\(q_2 = q_3\\) y están a la misma distancia de \\(q_4\\) (1 nm), sus fuerzas de repulsión se cancelan perfectamente.<br>
+                    La única fuerza neta que sobrevive es la atracción hacia el bromuro \\(q_1\\). Por la 3ª Ley de Newton (acción-reacción), si \\(q_4\\) atrae a \\(q_1\\) con \\(2,4 \\cdot 10^{-11} \\text{ N}\\), \\(q_1\\) atrae a \\(q_4\\) con exactamente la misma fuerza pero sentido opuesto.<br>
+                    <span class='resultado'>Resultado: &nbsp \\( F_4 = 2,4 \\cdot 10^{-11} \\text{ N} \\) (hacia la izquierda)</span>
+                </div>
+                <div class='paso'>
+                    <strong>c) Aceleración del ion bromuro (carga 1):</strong><br>
+                    Aplicamos la Segunda Ley de Newton:\\( F = m \\cdot a \\):<br>
+                    \\[ a = \\frac{F_{total\_1}}{m_1} = \\frac{5,518 \\cdot 10^{-11} \\text{ N}}{1,33 \\cdot 10^{-25} \\text{ kg}} \\]<br>
+                    <span class='resultado'>Resultado: &nbsp \\( a \\approx 4,15 \\cdot 10^{14} \\text{ m/s}^2 \\) (hacia la derecha)</span>
+                </div>
+                <div class='paso'>
+                    <strong>d) ¿A qué carbocatión se unirá?</strong><br>
+                    Observando el diagrama de fuerzas del apartado "a", la fuerza resultante sobre el ion bromuro apunta de forma perfecta y exclusivamente en la horizontal hacia la derecha, ya que los tirones verticales hacia arriba y hacia abajo se han anulado.<br>
+                    <span class='resultado'>Resultado: &nbsp El bromuro se unirá al carbocatión central (\\(q_4\\)), ya que la fuerza neta lo acelera en línea recta directa hacia él.</span>
+                </div>
+            `
         }
     ],
     "plano": [
