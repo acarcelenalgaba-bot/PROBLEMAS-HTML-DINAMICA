@@ -564,7 +564,7 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>Paso 1: Análisis de fuerzas y Diagrama de Cuerpo Libre (DCL):</strong><br>
                     Para resolver el problema, primero debemos identificar todas las fuerzas que actúan sobre el paracaidista y dibujarlas en un sistema de ejes de coordenadas, donde el eje X es paralelo al plano inclinado y el eje Y es perpendicular a él.<br>
-                    Las fuerzas son: el Peso (\\( \\vec{P} = m \\cdot \\vec{g} \\)), la Normal (\\( \\vec{N} \\)) ejercida por la superficie de la pirámide, y la Fuerza de Rozamiento cinético (\\( \\vec{F}_r \\)) que se opone al movimiento.<br>
+                    Las fuerzas son: el Peso (\\( \\vec{P} = m \\cdot \\vec{g} \\)), la Normal (\\( \\vec{N} \\)) ejercida por la superficie de la pirámide, y la Fuerza de Rozamiento cinético (\\( \\vec{F}_R \\)) que se opone al movimiento.<br>
                     <br>
                     <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_1.png' style='max-width: 90%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
                     <div style="text-align: center; margin: 20px 0;">
@@ -579,16 +579,16 @@ const baseDatosProblemas = {
 
                 <div class='paso'>
                     <strong>a) Cálculo de la aceleración:</strong><br>
-                    Aplicamos la segunda ley de Newton (\\( \sum \vec{F} = m \cdot \vec{a} \\)) en el eje del movimiento (X):<br>
-                    \\[ \sum F_x = m \cdot a \\implies P_x - F_r = m \cdot a \\]<br>
-                    Sabemos que la fuerza de rozamiento es \\( F_r = \\mu_c \\cdot N \\), y sustituyendo \\( N \\) por su valor:\\( F_r = \\mu_c \\cdot m \cdot g \cdot \cos(25^{\\circ}) \\).<br>
+                    Aplicamos la segunda ley de Newton (\\( \\sum \\vec{F} = m \\cdot \\vec{a} \\)) en el eje del movimiento (X):<br>
+                    \\[ \\sum F_x = m \\cdot a \\implies P_x - F_R = m \\cdot a \\]<br>
+                    Sabemos que la fuerza de rozamiento es \\( F_R = \\mu_c \\cdot N \\), y sustituyendo \\( N \\) por su valor:\\( F_R = \\mu_c \\cdot m \\cdot g \\cdot \\cos(25^{\\circ}) \\).<br>
                     Sustituimos las expresiones de las fuerzas en la ecuación de Newton:<br>
                     \\[ m \\cdot g \\cdot \\text{sen}(25^{\\circ}) - \\mu_c \\cdot (m \\cdot g \\cdot \\cos(25^{\\circ})) = m \\cdot a \\]<br>
                     Podemos simplificar la masa (\\( m \\)) en todos los términos (la aceleración no depende de la masa):<br>
                     \\[ g \\cdot \\text{sen}(25^{\\circ}) - \\mu_c \\cdot g \\cdot \\cos(25^{\\circ}) = a \\]<br>
                     Sacamos factor común \\( g \\) y calculamos:<br>
-                    \\[ a = 9,8 \cdot (\text{sen}(25^{\\circ}) - 0,35 \cdot \cos(25^{\\circ})) \\]< Internet says sen(25) ~ 0.4226, cos(25) ~ 0.9063 >\\[ a = 9,8 \cdot (0,4226 - 0,35 \cdot 0,9063) \\]\\[ a = 9,8 \cdot (0,4226 - 0,3172) = 9,8 \cdot 0,1054 = 1,033 \\text{ m/s}^2 \\]<br>
-                    <span class='resultado'>Resultado a: La aceleración de descenso es de \\( 1,033 \\text{ m/s}^2 \\).</span>
+                    \\[ a = 9,8 \\cdot (\\text{sen}(25^{\\circ}) - 0,35 \\cdot \\cos(25^{\\circ})) = 1,033 \\text{ m/s}^2 \\]<br>
+                    <span class='resultado'>Resultado: La aceleración de descenso es de \\( 1,033 \\text{ m/s}^2 \\).</span>
                 </div>
 
                 <div class='paso'>
@@ -599,16 +599,16 @@ const baseDatosProblemas = {
                     Despejamos el tiempo \\( t \\):<br>
                     \\[ t = \\frac{v - v_0}{a} \\]<br>
                     Sustituimos los valores:<br>
-                    \\[ t = \\frac{20 - 5}{1,033} = \\frac{15}{1,033} \approx 14,52 \\text{ s} \\]<br>
-                    <span class='resultado'>Resultado b: Tarda aproximadamente \\( 14,52 \\) segundos en alcanzar esa velocidad.</span>
+                    \\[ t = \\frac{20 - 5}{1,033} = \\frac{15}{1,033} \\approx 14,52 \\text{ s} \\]<br>
+                    <span class='resultado'>Resultado: Tarda aproximadamente \\( 14,52 \\) segundos en alcanzar esa velocidad.</span>
                 </div>
 
                 <div class='paso'>
                     <strong>c) Razonamiento sobre la variación del rozamiento según la posición:</strong><br>
                     Analicemos la fórmula de la fuerza de rozamiento cinético que hemos utilizado: \\( F_r = \\mu_c \\cdot N \\). <br>
                     Esta fórmula nos dice que la magnitud de la fuerza de rozamiento depende únicamente de dos factores: el coeficiente de rozamiento cinético (\\( \\mu_c \\)), que es una propiedad de los materiales en contacto (la ropa del paracaidista y la superficie de la pirámide), y la fuerza Normal (\\( N \\)), que es la fuerza de compresión perpendicular entre las superficies.<br>
-                    Como hemos visto en el Paso 1, la Normal depende exclusivamente del peso del paracaidista y del ángulo de inclinación de la pirámide (\\( N = m \cdot g \cdot \cos(25^{\\circ}) \\)). Ninguno de estos factores cambia si el paracaidista adopta una posición diferente (tumbado, sentado, etc.).<br>
-                    <span class='resultado'>Resultado c: NO varía. Según las leyes clásicas del rozamiento, la fuerza de rozamiento es independiente del área de la superficie de contacto. Por lo tanto, independientemente de su posición, mientras la masa y las superficies sean las mismas, el rozamiento será constante.</span>
+                    Como hemos visto en el Paso 1, la Normal depende exclusivamente del peso del paracaidista y del ángulo de inclinación de la pirámide (\\( N = m \\cdot g \\cdot \\cos(25^{\\circ}) \\)). Ninguno de estos factores cambia si el paracaidista adopta una posición diferente (tumbado, sentado, etc.).<br>
+                    <span class='resultado'>Resultado: NO varía. Según las leyes clásicas del rozamiento, la fuerza de rozamiento es independiente del área de la superficie de contacto. Por lo tanto, independientemente de su posición, mientras la masa y las superficies sean las mismas, el rozamiento será constante.</span>
                 </div>`
         },
         {
