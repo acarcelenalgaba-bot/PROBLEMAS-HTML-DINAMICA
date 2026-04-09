@@ -613,23 +613,87 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 2: Antiguo Egipto",
-            enunciado: "Los antiguos egipcios empleaban el plano inclinado para elevar los bloques de piedra ejerciendo fuerzas inferiores a sus pesos. Un esclavo que estaba construyendo la Gran Pirámide de Giza está tan cansado que deja de empujar su bloque de piedra. Sabiendo que la rampa tiene una inclinación de 20º sobre la horizontal y que el coeficiente de rozamiento estático entre el bloque y el plano es \\( \\ce{μ_e = 0,4} \\), determina: <br> a) Justifica si el bloque descenderá por el plano. <br> b) Indica qué fuerza fundamental supone el rozamiento.",
-            // solucion: `
-            //     <div class='paso'>
-            //         \\( a = g(\\sin 25^\\circ - 0,35 \\cos 25^\\circ) = 1,03 \\text{ m/s}^2 \\)<br>
-            //         \\( 20 = 5 + 1,03 \\cdot t \\implies t = 14,56 \\text{ s} \\)
-            //     </div>
-            // `
+            enunciado: "Un esclavo deja de empujar un bloque de piedra en una rampa con una inclinación de 20°. El coeficiente de rozamiento estático es \\( \\mu_e = 0,4 \\). <br> a) Justifica si el bloque descenderá por el plano. <br> b) Indica qué fuerza fundamental supone el rozamiento. ",
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Análisis de las fuerzas en reposo:</strong><br>
+                    Para saber si el bloque desliza, debemos comparar la fuerza que tira de él hacia abajo (componente del peso paralela al plano) con la fuerza máxima que el rozamiento puede aguantar antes de que el bloque empiece a moverse.<br>
+                    
+                    <br>
+                    - Fuerza que empuja hacia abajo (Peso tangencial): \\( P_x = m \\cdot g \\cdot \\text{sen}(20^{\\circ}) \\)<br>
+                    - Fuerza Normal (presión contra el plano): \\( N = m \\cdot g \\cdot \\cos(20^{\\circ}) \\)<br>
+                    - Fuerza de rozamiento estático máxima: \\( F_{e,max} = \\mu_e \\cdot N = \\mu_e \\cdot m \\cdot g \\cdot \\cos(20^{\\circ}) \\) <br> 
+                    <br>
+                    <div style='text-align: center; margin-bottom: 20px;'> 
+                        <img src='img/pi_1.png' style='max-width: 90%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> 
+                    </div>
+                </div>
+
+                <div class='paso'>
+                    <strong>a) Justificación del movimiento:</strong><br>
+                    El bloque descenderá solo si la fuerza a favor del movimiento (\\( P_x \\)) es mayor que la resistencia máxima del rozamiento (\\( F_{e,max} \\)). Comparamos ambas expresiones:<br>
+                    \\[ ¿ m \\cdot g \\cdot \\text{sen}(20^{\\circ}) > \\mu_e \\cdot m \\cdot g \\cdot \\cos(20^{\\circ}) ? \\]<br>
+                    Podemos simplificar \\( m \\cdot g \\) en ambos lados. La condición de movimiento se reduce a:<br>
+                    \\[ \\text{sen}(20^{\\circ}) > \\mu_e \\cdot \\cos(20^{\\circ}) \\]<br>
+                    Calculamos los valores:<br>
+                    - Fuerza motriz proporcional: \\( \\text{sen}(20^{\\circ}) \\approx 0,342 \\)<br>
+                    - Resistencia proporcional: \\( 0,4 \\cdot \\cos(20^{\\circ}) \\approx 0,4 \\cdot 0,940 = 0,376 \\)<br>
+                    Como \\( 0,342 < 0,376 \\), la fuerza del peso no es suficiente para vencer el rozamiento estático.<br>
+                    <span class='resultado'>Resultado a: El bloque NO descenderá; se quedará quieto en la rampa.</span>
+                </div>
+
+                <div class='paso'>
+                    <strong>b) ¿Qué fuerza fundamental supone el rozamiento?</strong><br>
+                    A nivel microscópico, el rozamiento no es una fuerza "independiente", sino que tiene su origen en las interacciones entre los átomos y moléculas de las dos superficies en contacto (las irregularidades de la piedra y la rampa).<br>
+                    Estas interacciones son de naturaleza eléctrica (atracciones y repulsiones entre electrones y núcleos de los materiales).<br>
+                    <span class='resultado'>Resultado b: El rozamiento es una manifestación de la <strong>fuerza electromagnética</strong>.</span>
+                </div>`
         },
         {
-            titulo: "Problema 3: Esquiador en ladera",
-            enunciado: "Un esquiador se deja caer por la ladera para coger velocidad suficiente y ascender por un plano inclinado de 25º. Entra en el plano inclinado con una velocidad de 20 m/s. El esquiador tiene una masa de 80 kg y el coeficiente de rozamiento entre los esquís y la nieve es de 0,1. Determina: <br> a) La aceleración con la que se frena el esquiador. <br> b) La velocidad con la que sale del plano, sabiendo que la longitud del plano inclinado es de 5 m. <br> c) Justo antes de hacer el salto, al esquiador se le cae un gorro en el plano inclinado de 25º. Determina si el gorro cae y desliza por el plano.",
-            // solucion: `
-            //     <div class='paso'>
-            //         \\( a = g(\\sin 25^\\circ - 0,35 \\cos 25^\\circ) = 1,03 \\text{ m/s}^2 \\)<br>
-            //         \\( 20 = 5 + 1,03 \\cdot t \\implies t = 14,56 \\text{ s} \\)
-            //     </div>
-            // `
+            titulo: "Problema 3: Ascenso del esquiador en plano inclinado",
+            enunciado: "Un esquiador de 80 kg entra en un plano inclinado de 25° a 20 m/s. El coeficiente de rozamiento es \\( \\mu = 0,1 \\). Determina: <br> a) La aceleración de frenado. <br> b) La velocidad tras recorrer 5 m de plano. <br> c) Si un gorro que se le cae deslizará ladera abajo.",
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Análisis de fuerzas en el ascenso:</strong><br>
+                    Al subir, el esquiador lucha contra dos fuerzas que apuntan hacia abajo del plano:<br>
+                    - Componente del peso paralela al plano: \\( P_x = m \\cdot g \\cdot \\text{sen}(25^{\\circ}) \\)<br>
+                    - Fuerza de rozamiento: \\( F_r = \\mu \\cdot N = \\mu \\cdot m \\cdot g \\cdot \\cos(25^{\\circ}) \\)<br>
+                    La sumatoria de fuerzas en el eje X (dirección del movimiento) es:<br>
+                    \\[ \\sum F_x = -P_x - F_r = m \\cdot a \\]
+                    
+                </div>
+
+                <div class='paso'>
+                    <strong>a) Cálculo de la aceleración de frenado:</strong><br>
+                    Sustituimos las expresiones de las fuerzas en la ecuación de Newton:<br>
+                    \\[ -m \\cdot g \\cdot \\text{sen}(25^{\\circ}) - \\mu \\cdot m \\cdot g \\cdot \\cos(25^{\\circ}) = m \\cdot a \\]<br>
+                    Simplificamos la masa (\\( m \\)) y calculamos:<br>
+                    \\[ a = -g \\cdot (\\text{sen}(25^{\\circ}) + \\mu \\cdot \\cos(25^{\\circ})) \\]<br>
+                    \\[ a = -9,8 \\cdot (0,4226 + 0,1 \\cdot 0,9063) = -9,8 \\cdot (0,4226 + 0,0906) \\]<br>
+                    \\[ a = -9,8 \\cdot 0,5132 = -5,029 \\text{ m/s}^2 \\]<br>
+                    <span class='resultado'>Resultado a: La aceleración es de \\( -5,03 \\text{ m/s}^2 \\) (el signo negativo indica que está frenando).</span>
+                </div>
+
+                <div class='paso'>
+                    <strong>b) Cálculo de la velocidad final tras 5 metros:</strong><br>
+                    Usamos la ecuación cinemática que relaciona velocidades, aceleración y distancia sin necesidad del tiempo:<br>
+                    \\[ v_f^2 = v_0^2 + 2 \\cdot a \\cdot \\Delta x \\]<br>
+                    Datos: \\( v_0 = 20 \\text{ m/s} \\), \\( a = -5,03 \\text{ m/s}^2 \\), \\( \\Delta x = 5 \\text{ m} \\).<br>
+                    \\[ v_f^2 = 20^2 + 2 \\cdot (-5,03) \\cdot 5 \\]<br>
+                    \\[ v_f^2 = 400 - 50,3 = 349,7 \\]<br>
+                    \\[ v_f = \\sqrt{349,7} \\approx 18,7 \\text{ m/s} \\]<br>
+                    <span class='resultado'>Resultado b: Sale del plano con una velocidad de \\( 18,7 \\text{ m/s} \\).</span>
+                </div>
+
+                <div class='paso'>
+                    <strong>c) ¿Deslizará el gorro hacia abajo?</strong><br>
+                    Para que el gorro deslice partiendo del reposo, la fuerza del peso hacia abajo (\\( P_x \\)) debe ser mayor que la fuerza de rozamiento estático máxima (\\( F_{e,max} \\)).<br>
+                    Suponiendo que el gorro tiene el mismo coeficiente de rozamiento (\\( \\mu = 0,1 \\)):<br>
+                    \\[ ¿ \\text{sen}(25^{\\circ}) > \\mu \\cdot \\cos(25^{\\circ}) ? \\]<br>
+                    \\[ 0,4226 > 0,1 \\cdot 0,9063 \\implies 0,4226 > 0,0906 \\]<br>
+                    Como la componente del peso es mucho mayor que la fuerza de rozamiento estático máxima:<br>
+                    <span class='resultado'>Resultado c: SÍ, el gorro deslizará y caerá plano abajo.</span>
+                </div>`
         },        
         {
             titulo: "Problema 4: Máquina de Atwood",
