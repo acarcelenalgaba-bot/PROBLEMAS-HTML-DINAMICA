@@ -907,11 +907,11 @@ const baseDatosProblemas = {
                     - Lado izquierdo (\\( m_1 \\)): \\( P_{1x} = m_1 \\cdot g \\cdot \\text{sen}(30^{\\circ}) = 100 \\cdot 9,8 \\cdot 0,5 = 490 \\text{ N} \\).<br>
                     - Lado derecho (\\( m_2 \\)): \\( P_{2x} = m_2 \\cdot g \\cdot \\text{sen}(45^{\\circ}) = 50 \\cdot 9,8 \\cdot 0,707 = 346,43 \\text{ N} \\).<br>
                     Como \\( P_{1x} > P_{2x} \\), el sistema tiende a moverse hacia la <strong>izquierda</strong>.
-                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_9an.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>
                 </div>
 
                 <div class='paso'>
                     <strong>a) Caso sin rozamiento (\\( \\mu = 0 \\)):</strong><br>
+                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_9an.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>
                     Aplicamos la segunda ley de Newton al sistema (Fuerza a favor - Fuerza en contra):<br>
                     \\[ P_{1x} - P_{2x} = (m_1 + m_2) \\cdot a \\]\n            
                     \\[ 490 - 346,43 = (100 + 50) \\cdot a \\]\n            
@@ -923,6 +923,7 @@ const baseDatosProblemas = {
 
                 <div class='paso'>
                     <strong>b) Caso con rozamiento (\\( \\mu_c = 0,05 \\)):</strong><br>
+                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_9an.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>
                     El rozamiento en ambos planos se opone al movimiento (apunta hacia la derecha):<br>
                     - \\( F_{r1} = \\mu_c \\cdot m_1 \\cdot g \\cdot \\cos(30^{\\circ}) = 0,05 \\cdot 100 \\cdot 9,8 \\cdot 0,866 = 42,43 \\text{ N} \\).<br>
                     - \\( F_{r2} = \\mu_c \\cdot m_2 \\cdot g \\cdot \\cos(45^{\\circ}) = 0,05 \\cdot 50 \\cdot 9,8 \\cdot 0,707 = 17,32 \\text{ N} \\).<br>
