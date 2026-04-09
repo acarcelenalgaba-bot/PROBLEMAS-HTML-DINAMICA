@@ -709,7 +709,7 @@ const baseDatosProblemas = {
                     Sustituimos valores:<br>
                     \\[ 4,90 - 3,92 = (0,4 + 0,5) \\cdot a \\]<br>
                     \\[ 0,98 = 0,9 \\cdot a \\implies a = \\frac{0,98}{0,9} \\approx 1,089 \\text{ m/s}^2 \\]<br>
-                    <span class='resultado'>Resultado c: La aceleración es de \\( 1,09 \\text{ m/s}^2 \\).</span>
+                    <span class='resultado'>Resultado: La aceleración es de \\( 1,09 \\text{ m/s}^2 \\).</span>
                 </div>
 
                 <div class='paso'>
@@ -718,7 +718,7 @@ const baseDatosProblemas = {
                     \\[ T - P_1 = m_1 \\cdot a \\]<br>
                     \\[ T = P_1 + (m_1 \\cdot a) \\]<br>
                     \\[ T = 3,92 + (0,4 \\cdot 1,089) = 3,92 + 0,4356 \\]<br>
-                    <span class='resultado'>Resultado b: La tensión de la cuerda es de \\( 4,356 \\text{ N} \\).</span>
+                    <span class='resultado'>Resultado: La tensión de la cuerda es de \\( 4,356 \\text{ N} \\).</span>
                 </div>
 
                 <div class='paso'>
@@ -917,7 +917,7 @@ const baseDatosProblemas = {
                     \\[ 143,57 = 150 \\cdot a \\implies a = \\frac{143,57}{150} \\approx 0,957 \\text{ m/s}^2 \\]\n            
                     Para la tensión, analizamos \\( m_2 \\) (que está subiendo por su plano):<br>
                     \\[ T - P_{2x} = m_2 \\cdot a \\implies T = 346,43 + (50 \\cdot 0,957) \\]\n            
-                    <span class='resultado'>Resultado a: \\( a = 0,96 \\text{ m/s}^2 \\) y \\( T = 394,28 \\text{ N} \\).</span>
+                    <span class='resultado'>Resultado: \\( a = 0,96 \\text{ m/s}^2 \\) y \\( T = 394,28 \\text{ N} \\).</span>
                 </div>
 
                 <div class='paso'>
@@ -932,7 +932,7 @@ const baseDatosProblemas = {
                     Calculamos la nueva tensión analizando de nuevo \\( m_2 \\):<br>
                     \\[ T - P_{2x} - F_{r2} = m_2 \\cdot a \\]\n            
                     \\[ T = 346,43 + 17,32 + (50 \\cdot 0,559) \\]\n            
-                    <span class='resultado'>Resultado b: \\( a = 0,56 \\text{ m/s}^2 \\) y \\( T = 391,70 \\text{ N} \\).</span>
+                    <span class='resultado'>Resultado: \\( a = 0,56 \\text{ m/s}^2 \\) y \\( T = 391,70 \\text{ N} \\).</span>
                 </div>
         `
         }    
@@ -954,7 +954,7 @@ const baseDatosProblemas = {
                     <strong>a) Cálculo del momento inicial</strong><br>
                     Calculamos el momento aplicado originalmente, que representa el esfuerzo de rotación necesario para abrir la puerta:<br>
                     \\[ M_1 = F_1 \\cdot d_1 = 2 \\text{ N} \\cdot 0,4 \\text{ m} = 0,8 \\text{ N} \\cdot \\text{m} \\]<br>
-                    <span class='resultado'>Resultado a: El momento de la fuerza es de \\( 0,8 \\text{ N} \\cdot \\text{m} \\).</span>
+                    <span class='resultado'>Resultado: El momento de la fuerza es de \\( 0,8 \\text{ N} \\cdot \\text{m} \\).</span>
                 </div>
 
                 <div class='paso'>
@@ -963,7 +963,7 @@ const baseDatosProblemas = {
                     \\[ M_2 = F_2 \\cdot d_2 = 3 \\text{ N} \\cdot 0,2 \\text{ m} = 0,6 \\text{ N} \\cdot \\text{m} \\]<br>
                     Para que la puerta se abra, el momento aplicado debe ser igual o mayor al momento inicial requerido (\\( M_1 \\)). Comparando ambos valores:<br>
                     \\[ 0,6 \\text{ N} \\cdot \\text{m} < 0,8 \\text{ N} \\cdot \\text{m} \\implies M_2 < M_1 \\]<br>
-                    <span class='resultado'>Resultado b: Debido a que el momento generado es menor, la puerta NO se abrirá.</span>
+                    <span class='resultado'>Resultado: Debido a que el momento generado es menor, la puerta NO se abrirá.</span>
                 </div>
                 `
         },
