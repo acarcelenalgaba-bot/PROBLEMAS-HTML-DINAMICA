@@ -907,6 +907,7 @@ const baseDatosProblemas = {
                     - Lado izquierdo (\\( m_1 \\)): \\( P_{1x} = m_1 \\cdot g \\cdot \\text{sen}(30^{\\circ}) = 100 \\cdot 9,8 \\cdot 0,5 = 490 \\text{ N} \\).<br>
                     - Lado derecho (\\( m_2 \\)): \\( P_{2x} = m_2 \\cdot g \\cdot \\text{sen}(45^{\\circ}) = 50 \\cdot 9,8 \\cdot 0,707 = 346,43 \\text{ N} \\).<br>
                     Como \\( P_{1x} > P_{2x} \\), el sistema tiende a moverse hacia la <strong>izquierda</strong>.
+                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_9an.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>
                 </div>
 
                 <div class='paso'>
