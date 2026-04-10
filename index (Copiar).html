@@ -42,27 +42,27 @@
 
         .contenedor-menus {
             display: flex;
-            flex-wrap: nowrap;      /* Prohibido saltar de línea */
-            gap: 5px;               /* Espacio mínimo entre cajas */
-            justify-content: center; /* Centra el conjunto de menús */
-            width: 100%;
-            padding: 10px 0;
+            flex-wrap: nowrap; 
+            gap: 15px; /* Más espacio entre los botones */
+            align-items: center;
+            justify-content: center;
+            overflow-x: auto; 
+            padding-bottom: 5px;
         }
 
         /* Desplegables con mejor tamaño */
         .menu-desplegable {
-            flex: 0 1 auto;        /* 0: No crece, 1: Puede encogerse, auto: Tamaño según texto */
-            width: auto;           /* Ajuste automático al contenido */
-            min-width: 0;          /* Elimina cualquier restricción de tamaño mínimo */
-            padding: 10px 6px;     /* Espacio interno reducido a los lados */
-            font-size: 13px;       /* Tamaño de fuente ideal para que quepan 7 */
+            flex: 1 1 auto;
+            min-width: 160px; /* Aseguramos un buen ancho mínimo */
+            padding: 12px 10px; /* Más gorditos y fáciles de clicar */
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            font-size: 16px; /* Letra más grande y legible */
             font-weight: 600;
             color: #495057;
             background-color: #f8f9fa;
-            border: 1px solid #ced4da;
-            border-radius: 8px;
             cursor: pointer;
-            white-space: nowrap;   /* El texto no se corta ni salta */
+            outline: none;
             transition: all 0.2s;
         }
 

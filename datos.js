@@ -643,28 +643,28 @@ const baseDatosProblemas = {
                     - Fuerza de rozamiento: \\( F_r = \\mu \\cdot N = \\mu \\cdot m \\cdot g \\cdot \\cos(25^{\\circ}) \\)<br>
                     La sumatoria de fuerzas en el eje X (dirección del movimiento) es:<br>
                     \\[ \\sum F_x = -P_x - F_r = m \\cdot a \\]
-                    
+                    <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_3.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
                 </div>
 
                 <div class='paso'>
                     <strong>a) Cálculo de la aceleración de frenado:</strong><br>
                     Sustituimos las expresiones de las fuerzas en la ecuación de Newton:<br>
-                    \\[ -m \\cdot g \\cdot \\text{sen}(25^{\\circ}) - \\mu \\cdot m \\cdot g \\cdot \\cos(25^{\\circ}) = m \\cdot a \\]<br>
+                    \\[ -m \\cdot g \\cdot \\text{sen}(25^{\\circ}) - \\mu \\cdot m \\cdot g \\cdot \\cos(25^{\\circ}) = m \\cdot a \\]
                     Simplificamos la masa (\\( m \\)) y calculamos:<br>
-                    \\[ a = -g \\cdot (\\text{sen}(25^{\\circ}) + \\mu \\cdot \\cos(25^{\\circ})) \\]<br>
-                    \\[ a = -9,8 \\cdot (0,4226 + 0,1 \\cdot 0,9063) = -9,8 \\cdot (0,4226 + 0,0906) \\]<br>
-                    \\[ a = -9,8 \\cdot 0,5132 = -5,029 \\text{ m/s}^2 \\]<br>
+                    \\[ a = -g \\cdot (\\text{sen}(25^{\\circ}) + \\mu \\cdot \\cos(25^{\\circ})) \\]
+                    \\[ a = -9,8 \\cdot (0,4226 + 0,1 \\cdot 0,9063) = -9,8 \\cdot (0,4226 + 0,0906) \\]
+                    \\[ a = -9,8 \\cdot 0,5132 = -5,029 \\text{ m/s}^2 \\]
                     <span class='resultado'>Resultado: La aceleración es de \\( -5,03 \\text{ m/s}^2 \\) (el signo negativo indica que está frenando).</span>
                 </div>
 
                 <div class='paso'>
                     <strong>b) Cálculo de la velocidad final tras 5 metros:</strong><br>
                     Usamos la ecuación cinemática que relaciona velocidades, aceleración y distancia sin necesidad del tiempo:<br>
-                    \\[ v_f^2 = v_0^2 + 2 \\cdot a \\cdot \\Delta x \\]<br>
+                    \\[ v_f^2 = v_0^2 + 2 \\cdot a \\cdot \\Delta x \\]
                     Datos: \\( v_0 = 20 \\text{ m/s} \\), \\( a = -5,03 \\text{ m/s}^2 \\), \\( \\Delta x = 5 \\text{ m} \\).<br>
-                    \\[ v_f^2 = 20^2 + 2 \\cdot (-5,03) \\cdot 5 \\]<br>
-                    \\[ v_f^2 = 400 - 50,3 = 349,7 \\]<br>
-                    \\[ v_f = \\sqrt{349,7} \\approx 18,7 \\text{ m/s} \\]<br>
+                    \\[ v_f^2 = 20^2 + 2 \\cdot (-5,03) \\cdot 5 \\]
+                    \\[ v_f^2 = 400 - 50,3 = 349,7 \\]
+                    \\[ v_f = \\sqrt{349,7} \\approx 18,7 \\text{ m/s} \\]
                     <span class='resultado'>Resultado: Sale del plano con una velocidad de \\( 18,7 \\text{ m/s} \\).</span>
                 </div>
 
@@ -672,8 +672,8 @@ const baseDatosProblemas = {
                     <strong>c) ¿Deslizará el gorro hacia abajo?</strong><br>
                     Para que el gorro deslice partiendo del reposo, la fuerza del peso hacia abajo (\\( P_x \\)) debe ser mayor que la fuerza de rozamiento estático máxima (\\( F_{e,max} \\)).<br>
                     Suponiendo que el gorro tiene el mismo coeficiente de rozamiento (\\( \\mu = 0,1 \\)):<br>
-                    \\[ ¿ \\text{sen}(25^{\\circ}) > \\mu \\cdot \\cos(25^{\\circ}) ? \\]<br>
-                    \\[ 0,4226 > 0,1 \\cdot 0,9063 \\implies 0,4226 > 0,0906 \\]<br>
+                    \\[ ¿ \\text{sen}(25^{\\circ}) > \\mu \\cdot \\cos(25^{\\circ}) ? \\]
+                    \\[ 0,4226 > 0,1 \\cdot 0,9063 \\implies 0,4226 > 0,0906 \\]
                     Como la componente del peso es mucho mayor que la fuerza de rozamiento estático máxima:<br>
                     <span class='resultado'>Resultado: SÍ, el gorro deslizará y caerá plano abajo.</span>
                 </div>`
