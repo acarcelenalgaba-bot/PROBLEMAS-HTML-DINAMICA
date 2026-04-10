@@ -94,13 +94,13 @@ const baseDatosProblemas = {
                     <td>\\( 1,482 \\cdot 10^{23} \\)</td>
                     <td>\\(5262\\)</td>
                 </tr>
-            </table> <br> a) El peso que tendría un asteroide de 100 kg en la superficie de Júpiter. <br> b) El peso que tendría un asteroide de 100 kg en la superficie de Ganímedes (la mayor luna de Júpiter) <br> c) Sabiendo que la velocidad orbital de Ganímedes es \\(1,18 \\cdot 10^{4}\\) m/s, obtén el radio orbital.<br> d) La distancia desde Ganímedes a la que debe colocarse el asteroide entre Júpiter y Ganímedes para que sea nula la fuerza gravitaroria sobre él (considerando nulas el resto de fuerzas gravitarorias) La distancia entre Júpiter y Ganímedes es de \\(1,2 \\cdot 10^6\\) m. <br>Datos: &nbsp \\(G = 6,67 \\cdot 10^{-11} N \\cdot m^2 \\cdot kg^{-2} \\)  `,
+            </table> <br> a) El peso que tendría un asteroide de 100 kg en la superficie de Júpiter. <br> b) El peso que tendría un asteroide de 100 kg en la superficie de Ganímedes (la mayor luna de Júpiter) <br> c) Sabiendo que la velocidad orbital de Ganímedes es \\(1,18 \\cdot 10^{4}\\) m/s, obtén el radio orbital.<br> d) La distancia desde Ganímedes a la que debe colocarse el asteroide entre Júpiter y Ganímedes para que sea nula la fuerza gravitaroria sobre él (considerando nulas el resto de fuerzas gravitarorias) La distancia entre Júpiter y Ganímedes es de \\(1,2 \\cdot 10^6\\) km. <br>Datos: &nbsp \\(G = 6,67 \\cdot 10^{-11} N \\cdot m^2 \\cdot kg^{-2} \\)  `,
             solucion: `
                 <div class='paso'>
                     <strong>a) Peso en Júpiter:</strong> <br>
                     El "peso" no es otra cosa que la fuerza de atracción gravitatoria que ejerce un planeta sobre un objeto en su superficie. Para ello, aplicamos directamente la Ley de Gravitación Universal de Newton, asumiendo que la distancia entre los centros de masa es el radio del planeta. Sustituimos nuestros datos: <br>
                     Radio = \\( \\ce{ \\dfrac{142984}{2} = 71492 \\ km = 71492000 \\ m } \\) <br>
-                    \\[ P_J = G \\cdot \\frac{M_J \\cdot m}{R_J^2} = 6,67 \\cdot 10^{-11} \\cdot \\frac{1,889 \\cdot 10^{27} \\cdot 100 }{(71492000)^2} \\]<br>
+                    \\[ P_J = G \\cdot \\frac{M_J \\cdot m}{R_J^2} = 6,67 \\cdot 10^{-11} \\cdot \\frac{1,889 \\cdot 10^{27} \\cdot 100 }{(71492000)^2} \\]
                     <span class='resultado'>Resultado: &nbsp; P = 2465 N</span>
                 </div>
                 <div class='paso'>
@@ -109,16 +109,16 @@ const baseDatosProblemas = {
                     \\[ P_G = G \\cdot \\frac{M_G \\cdot m}{R_G^2} \\]
                     Sustituimos:
                     Radio = \\(  \\dfrac{5262}{2} = 2631 \\ km = 2631000 \\ m \\) <br>
-                    \\[ P_G = G \\cdot \\frac{M_G \\cdot m}{R_G^2} = 6,67 \\cdot 10^{-11} \\cdot \\frac{1,482 \\cdot 10^{23} \\cdot 100 }{(2631000)^2} \\]<br>
+                    \\[ P_G = G \\cdot \\frac{M_G \\cdot m}{R_G^2} = 6,67 \\cdot 10^{-11} \\cdot \\frac{1,482 \\cdot 10^{23} \\cdot 100 }{(2631000)^2} \\]
                     <span class='resultado'>Resultado: &nbsp; P = 177,5 N</span>
                 </div>
                 <div class='paso'>
                     <strong>c) Radio orbital:</strong> <br>
                     Para que un cuerpo (Ganímedes) se mantenga en órbita circular alrededor de otro (Júpiter), la fuerza gravitatoria que lo atrae debe actuar como fuerza centrípeta. Esta es la condición de equilibrio dinámico de las órbitas. F gravitatoria ​= F centrípeta​ <br>
-                    \\[ G \\cdot \\frac{M_J \\cdot M_G}{r^2} =  M_G \\cdot \\frac{v^2}{r} \\] <br>
+                    \\[ G \\cdot \\frac{M_J \\cdot M_G}{r^2} =  M_G \\cdot \\frac{v^2}{r} \\]
                     La masa de Ganímedes (\\(M_G\\)​) y uno de los radios (r) se cancelan en ambos lados de la ecuación. Nos queda: <br>
-                    \\[ r = \\frac{G \\cdot M_J}{v^2} = \\frac{6,67 \\cdot 10^{-11} \\cdot 1,482 \\cdot 10^{23} }{(1,18 \\cdot 10^{4})^2} \\]<br>
-                    <span class='resultado'>Resultado: &nbsp; r = 1,07 · 10⁹ m</span>
+                    \\[ r = \\frac{G \\cdot M_J}{v^2} = \\frac{6,67 \\cdot 10^{-11} \\cdot 1,889 \\cdot 10^{27} }{(1,18 \\cdot 10^{4})^2} \\]
+                    <span class='resultado'>Resultado: &nbsp; \\( r = 9,05 \\cdot 10^{8} \\\ m \\)</span>
                 </div>
                 <div class='paso'>
                     <strong>d) Punto nulo desde Ganímedes:</strong><br>
@@ -131,7 +131,7 @@ const baseDatosProblemas = {
                     Truco de examen: Para evitar resolver una ecuación de segundo grado farragosa, aplicamos la raíz cuadrada a ambos lados de la igualdad: <br>
                     \\[ \\frac{\\sqrt{M_J}}{d - x} =  \\frac{\\sqrt{M_G}}{x} \\rightarrow x = \\frac{d \\cdot \\sqrt{M_G}}{\\sqrt{M_J} + \\sqrt{M_G}}  \\]
                     Sustituyendo datos: <br>
-                    \\[ x = \\frac{1,26 \\cdot 10^6 \\cdot \\sqrt{1,482 \\cdot 10^{23}}}{\\sqrt{1,889 \\cdot 10^{27}} + \\sqrt{1,482 \\cdot 10^{23}}}  \\]
+                    \\[ x = \\frac{1,26 \\cdot 10^9 \\cdot \\sqrt{1,482 \\cdot 10^{23}}}{\\sqrt{1,889 \\cdot 10^{27}} + \\sqrt{1,482 \\cdot 10^{23}}}  \\]
                     <span class='resultado'>Resultado: &nbsp; x = 10536 m</span>
                 </div>
             `
