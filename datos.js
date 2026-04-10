@@ -947,7 +947,7 @@ const baseDatosProblemas = {
             solucion: `
                 <div class='paso'>
                     <strong>Paso 1: Análisis físico y conversión de unidades:</strong><br>
-                    El momento de una fuerza (o torque) es la magnitud que mide la capacidad de una fuerza para producir una rotación. Para trabajar en el Sistema Internacional (S.I.), primero convertimos las distancias de centímetros a metros:<br>
+                    El momento de una fuerza es la magnitud que mide la capacidad de una fuerza para producir una rotación. Para trabajar en el Sistema Internacional (S.I.), primero convertimos las distancias de centímetros a metros:<br>
                     - Caso A: \\( F_1 = 2 \\text{ N} \\) y \\( d_1 = 40 \\text{ cm} = 0,4 \\text{ m} \\).<br>
                     - Caso B: \\( F_2 = 3 \\text{ N} \\) y \\( d_2 = 20 \\text{ cm} = 0,2 \\text{ m} \\).<br>
                     La fórmula fundamental es: \\( M = F \\cdot d \\).
