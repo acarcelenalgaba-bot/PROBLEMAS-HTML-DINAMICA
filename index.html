@@ -23,20 +23,20 @@
             height: 100vh; 
         }
 
-        /* --- ZONA SUPERIOR: EL MENÚ EN UNA LÍNEA MÁS GRANDE --- */
+        /* --- ZONA SUPERIOR: EL MENÚ --- */
         .zona-menu {
             flex: 0 0 auto; 
             background-color: #ffffff; 
-            padding: 15px 3%; /* Un poco más de margen exterior */
+            padding: 15px 3%; 
             border-bottom: 1px solid #d1d8e0;
             z-index: 1000; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         h1 {
-            margin: 0 0 15px 0; /* Más espacio debajo del título */
+            margin: 0 0 15px 0; 
             text-align: center;
-            font-size: 26px; /* Título más grande */
+            font-size: 26px; 
             color: #34495e;
         }
 
@@ -45,67 +45,72 @@
             flex-wrap: nowrap;
             gap: 5px;
             align-items: center;
-            width: 100%;           /* Ocupa el ancho disponible */
-            max-width: 100%;       /* Límite estricto: nunca supera al padre/ventana */
-            overflow-x: auto;      /* Scroll horizontal solo cuando los items no caben */
+            width: 100%;           
+            max-width: 100%;       
+            overflow-x: auto;      
             padding-bottom: 5px;
-            justify-content: flex-start; /* ⚠️ Clave: flex-start + scroll funciona; center lo rompe */
+            justify-content: flex-start; 
         }
 
-        /* Evita que los botones/enlaces se encojan en pantallas pequeñas */
         .contenedor-menus > * {
             flex-shrink: 0;
         }
 
-        /* Desplegables con mejor tamaño */
         .menu-desplegable {
             flex: 0 1 auto;
-            min-width: 100px; /* Aseguramos un buen ancho mínimo */
-            padding: 12px 10px; /* Más gorditos y fáciles de clicar */
+            min-width: 100px; 
+            padding: 12px 10px; 
             border-radius: 8px;
             border: 1px solid #ced4da;
-            font-size: 14px; /* Letra más grande y legible */
+            font-size: 14px; 
             font-weight: 600;
             color: #495057;
             background-color: #f8f9fa;
             cursor: pointer;
             outline: none;
-            transition: all 0.2s;
+            transition: all 0.3s;
         }
 
         .menu-desplegable:hover {
             border-color: #3498db;
             background-color: #ffffff;
         }
+
+        /* --- NUEVO ESTILO: MENÚ SELECCIONADO --- */
+        .menu-desplegable.menu-activo {
+            background-color: #3498db;
+            color: white;
+            border-color: #2980b9;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+        }
         
-        /* --- ZONA INFERIOR: VISOR ANCHO Y ESPACIOSO --- */
+        /* --- ZONA INFERIOR --- */
         .zona-lectura {
             flex: 1 1 auto; 
             overflow-y: auto; 
-            padding: 10px 5%; /* Volvemos al padding generoso original */
+            padding: 10px 5%; 
             background-color: #f1f3f5; 
         }
 
         #caja-visor {
             background: #ffffff;
-            /* Eliminamos el max-width para que sea ancha */
-            padding: 50px; /* Mucho espacio interior para leer cómodo */
-            border-radius: 12px; /* Bordes un poco más redondos */
+            padding: 50px; 
+            border-radius: 12px; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 6px solid #3498db; /* Línea azul superior más gruesa */
+            border-top: 6px solid #3498db; 
             min-height: 80%; 
         }
 
         #mensaje-inicial {
             text-align: center;
             color: #95a5a6;
-            font-size: 20px; /* Mensaje inicial más grande */
+            font-size: 20px; 
             margin-top: 50px;
         }
 
         #contenido-problema { display: none; }
         #titulo-visor { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 0; }
-        #texto-visor { font-size: 20px; line-height: 1.8; margin-top: 25px; } /* Letra del problema enorme y legible */
+        #texto-visor { font-size: 20px; line-height: 1.8; margin-top: 25px; } 
         
         .controles-solucion { display: flex; justify-content: center; margin-top: 40px; }
         #btn-solucion { display: none; padding: 15px 35px; background-color: #27ae60; color: white; border: none; border-radius: 6px; font-size: 18px; cursor: pointer; font-weight: bold; transition: 0.2s; }
@@ -114,9 +119,8 @@
         #caja-solucion { display: none; margin-top: 35px; padding: 30px; background-color: #fdfdfd; border: 1px solid #e9ecef; border-left: 6px solid #27ae60; color: #2c3e50; font-size: 19px; line-height: 1.8; }
         .resultado { background-color: #FCC0B3; padding: 5px 10px; border-radius: 5px; font-weight: bold; }
 
-        /* --- NUEVO: ESTILOS PARA EL PASO A PASO --- */
         #caja-solucion .paso {
-            display: none; /* Ocultos por defecto */
+            display: none; 
             margin-bottom: 15px;
             padding: 15px;
             background-color: #f8f9fa;
@@ -125,20 +129,18 @@
         }
 
         #caja-solucion .paso.visible {
-            display: block; /* Se muestran al añadir la clase con JS */
+            display: block; 
         }
 
         @keyframes aparecer {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
     </style>
 </head>
 <body>
 
     <div class="pagina-completa">
-
         <header class="zona-menu">
             <h1>👨‍🏫 Cuaderno de Física - Dinámica</h1>
             <div class="contenedor-menus">
@@ -158,7 +160,6 @@
                 <div id="contenido-problema">
                     <h2 id="titulo-visor"></h2>
                     <div id="texto-visor"></div>
-                    <!-- <div class="controles-solucion"><button id="btn-solucion" onclick="toggleSolucion()">Ver Solución</button></div> -->
                     <div class="controles-solucion">
                         <button id="btn-solucion" onclick="toggleSolucion()">Ver Solución</button>
                         <button id="btn-siguiente-paso" onclick="revelarSiguientePaso()" style="display: none; padding: 15px 35px; background-color: #3498db; color: white; border: none; border-radius: 6px; font-size: 18px; cursor: pointer; font-weight: bold; transition: 0.2s; margin-left: 15px;">Siguiente Paso ⬇️</button>
@@ -178,6 +179,8 @@
                 return;
             }
 
+            const todosLosMenus = document.querySelectorAll('.menu-desplegable');
+
             for (const categoria in baseDatosProblemas) {
                 const selectMenu = document.getElementById(`menu-${categoria}`);
                 if (selectMenu) {
@@ -188,18 +191,21 @@
                         selectMenu.appendChild(opcion);
                     });
 
-                    selectMenu.addEventListener('mousedown', () => {
-                        document.getElementById('contenido-problema').style.display = 'none';
-                        document.getElementById('mensaje-inicial').style.display = 'block';
-                    });
-
                     selectMenu.addEventListener('change', function() {
                         if (this.value !== "") {
                             const prob = baseDatosProblemas[categoria][this.value];
+                            
+                            // --- LÓGICA DE RESALTADO ---
+                            // 1. Quitar clase activo de todos los menús
+                            todosLosMenus.forEach(m => m.classList.remove('menu-activo'));
+                            // 2. Añadir clase activo al menú actual
+                            this.classList.add('menu-activo');
+                            
                             mostrarEnunciado(prob.titulo, prob.enunciado, prob.solucion);
                             
-                            document.querySelectorAll('.menu-desplegable').forEach(menu => {
-                                menu.selectedIndex = 0;
+                            // Resetear los otros selects para que vuelvan al "index 0" (título de categoría)
+                            todosLosMenus.forEach(menu => {
+                                if (menu !== this) menu.selectedIndex = 0;
                             });
                         }
                     });
@@ -212,7 +218,6 @@
             document.getElementById('contenido-problema').style.display = 'block';
             document.getElementById('caja-solucion').style.display = 'none';
             
-            // Ocultamos el botón de paso a paso al cambiar de problema
             const btnSiguiente = document.getElementById('btn-siguiente-paso');
             if(btnSiguiente) btnSiguiente.style.display = 'none';
 
@@ -240,144 +245,36 @@
             if (caja.style.display === 'none') {
                 caja.style.display = 'block';
                 btn.innerText = 'Ocultar Solución';
-                
-                // Mostrar y reiniciar el botón de Siguiente Paso
                 btnSiguiente.style.display = 'inline-block';
                 btnSiguiente.innerText = "Mostrar primer paso ⬇️";
                 btnSiguiente.disabled = false;
                 btnSiguiente.style.backgroundColor = "#3498db";
                 btnSiguiente.style.cursor = "pointer";
-
-                // Asegurarnos de que todos los pasos empiezan ocultos
                 document.querySelectorAll('#caja-solucion .paso').forEach(p => p.classList.remove('visible'));
-
                 MathJax.typesetPromise();
-                
             } else {
                 caja.style.display = 'none';
                 btn.innerText = 'Ver Solución';
-                btnSiguiente.style.display = 'none'; // Lo ocultamos
+                btnSiguiente.style.display = 'none';
             }
         }
 
-        // --- NUEVA FUNCIÓN PARA EL PASO A PASO ---
         function revelarSiguientePaso() {
             const contenedor = document.getElementById('caja-solucion');
             const boton = document.getElementById('btn-siguiente-paso');
-            
-            // Buscamos el primer paso que no tiene la clase 'visible'
             const siguientePaso = contenedor.querySelector('.paso:not(.visible)');
-            
             if (siguientePaso) {
                 siguientePaso.classList.add('visible'); 
                 boton.innerText = "Siguiente paso ⬇️";
-                
-                // Comprobamos si ya no quedan más pasos ocultos
                 const pasosRestantes = contenedor.querySelector('.paso:not(.visible)');
                 if (!pasosRestantes) {
                     boton.innerText = "¡Solución completada!";
                     boton.disabled = true;
-                    boton.style.backgroundColor = "#95a5a6"; // Se pone gris
+                    boton.style.backgroundColor = "#95a5a6";
                     boton.style.cursor = "default";
                 }
             }
         }
-        
-        // ==========================================
-        // MOTORES DE SIMULACIÓN INTERACTIVA
-        // ==========================================
-        function iniciarSimuladorPeralte() {
-            const canvas = document.getElementById('lienzoPeralte');
-            if (!canvas) return; // Si no hay canvas en este problema, abortamos sin dar error.
-
-            const ctx = canvas.getContext('2d');
-            const g = 9.8;
-
-            const inputV = document.getElementById('vInput');
-            const inputR = document.getElementById('rInput');
-            const valV = document.getElementById('valV');
-            const valR = document.getElementById('valR');
-            const valAngulo = document.getElementById('valAngulo');
-
-            function dibujarFlecha(origenX, origenY, destinoX, destinoY, color, etiqueta) {
-                const headlen = 10;
-                const dx = destinoX - origenX;
-                const dy = destinoY - origenY;
-                const angle = Math.atan2(dy, dx);
-                
-                ctx.beginPath();
-                ctx.moveTo(origenX, origenY);
-                ctx.lineTo(destinoX, destinoY);
-                ctx.lineTo(destinoX - headlen * Math.cos(angle - Math.PI / 6), destinoY - headlen * Math.sin(angle - Math.PI / 6));
-                ctx.moveTo(destinoX, destinoY);
-                ctx.lineTo(destinoX - headlen * Math.cos(angle + Math.PI / 6), destinoY - headlen * Math.sin(angle + Math.PI / 6));
-                
-                ctx.strokeStyle = color;
-                ctx.lineWidth = 2;
-                ctx.stroke();
-
-                ctx.fillStyle = color;
-                ctx.font = "bold 14px 'Segoe UI', Arial";
-                ctx.fillText(etiqueta, destinoX + 5, destinoY + 5);
-            }
-
-            function actualizarSimulacion() {
-                const v = parseFloat(inputV.value);
-                const R = parseFloat(inputR.value);
-
-                valV.innerText = v.toFixed(1);
-                valR.innerText = R;
-
-                const anguloRadianes = Math.atan((v * v) / (R * g));
-                valAngulo.innerText = (anguloRadianes * (180 / Math.PI)).toFixed(1);
-
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-                const origenPistaX = 500, origenPistaY = 350, longitudPista = 400;
-                const finPistaX = origenPistaX - longitudPista * Math.cos(anguloRadianes);
-                const finPistaY = origenPistaY - longitudPista * Math.sin(anguloRadianes);
-
-                // Dibujar Pista
-                ctx.beginPath();
-                ctx.moveTo(origenPistaX, origenPistaY);
-                ctx.lineTo(finPistaX, finPistaY);
-                ctx.lineTo(origenPistaX, origenPistaY);
-                ctx.lineTo(100, origenPistaY); 
-                ctx.strokeStyle = "#95a5a6";
-                ctx.lineWidth = 4;
-                ctx.stroke();
-
-                // Dibujar Bloque
-                const posX = origenPistaX - (longitudPista / 2) * Math.cos(anguloRadianes);
-                const posY = origenPistaY - (longitudPista / 2) * Math.sin(anguloRadianes);
-
-                ctx.save();
-                ctx.translate(posX, posY);
-                ctx.rotate(-anguloRadianes);
-                ctx.fillStyle = "#3498db"; // Azul acorde a tu diseño
-                ctx.fillRect(-25, -50, 50, 50);
-                ctx.restore();
-
-                // Dibujar Fuerzas
-                const masaVisual = 100;
-                dibujarFlecha(posX, posY - 25, posX, posY + masaVisual, "blue", "Peso (mg)");
-                
-                const magNormal = masaVisual / Math.cos(anguloRadianes);
-                const normalX = posX + magNormal * Math.sin(anguloRadianes);
-                const normalY = posY - 25 - magNormal * Math.cos(anguloRadianes);
-                dibujarFlecha(posX, posY - 25, normalX, normalY, "red", "Normal (N)");
-
-                ctx.setLineDash([5, 5]);
-                dibujarFlecha(posX, posY - 25, posX, normalY, "green", "Ny");
-                dibujarFlecha(posX, posY - 25, normalX, posY - 25, "orange", "Nx (F. Centrípeta)");
-                ctx.setLineDash([]);
-            }
-
-            inputV.addEventListener('input', actualizarSimulacion);
-            inputR.addEventListener('input', actualizarSimulacion);
-            actualizarSimulacion(); // Dibujar la primera vez
-        }
-
 
         window.onload = inicializarMenus;
     </script>

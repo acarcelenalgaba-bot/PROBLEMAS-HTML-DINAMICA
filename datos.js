@@ -7,25 +7,25 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>a) En la superficie:</strong><br>
                     Aplicamos la Ley de Gravitación Universal de Newton:  &nbsp \\( P = G \\cdot \\dfrac{M_T \\cdot m}{R_T^2} \\)<br>
-                    \\[ P = 6,67 \\cdot 10^{-11} \\cdot \\frac{5,95 \\cdot 10^{24} \\cdot 80}{(6,371 \\cdot 10^6)^2} \\]<br>
+                    \\[ P = 6,67 \\cdot 10^{-11} \\cdot \\frac{5,95 \\cdot 10^{24} \\cdot 80}{(6,371 \\cdot 10^6)^2} \\]
                     <span class='resultado'>Resultado:  &nbsp P = 782 N</span>
                 </div>
                 <div class='paso'>
                     <strong>b) En el Everest:</strong><br>
                     Sumamos la altura al radio: &nbsp \\( r = R_T + h = 6371000 + 8848 = 6379848 \\text{ m}\\)<br>
-                    \\[ P = 6,67 \\cdot 10^{-11} \\cdot \\frac{5,95 \\cdot 10^{24} \\cdot 80}{(6379848)^2} \\]<br>
+                    \\[ P = 6,67 \\cdot 10^{-11} \\cdot \\frac{5,95 \\cdot 10^{24} \\cdot 80}{(6379848)^2} \\]
                     <span class='resultado'>Resultado:  &nbsp P = 780 N</span>
                 </div>
                 <div class='paso'>
                     <strong>c) En la estación MIR (h = 200 km):</strong><br>
                     \\( r = 6371000 + 200000 = 6571000 \\text{ m}\\)<br>
-                    \\[ P = 6,67 \\cdot 10^{-11} \\cdot \\frac{5,95 \\cdot 10^{24} \\cdot 80}{(6571000)^2} \\]<br>
+                    \\[ P = 6,67 \\cdot 10^{-11} \\cdot \\frac{5,95 \\cdot 10^{24} \\cdot 80}{(6571000)^2} \\]
                     <span class='resultado'>Resultado:  &nbsp P = 735 N</span>
                 </div>
                 <div class='paso'>
                     <strong>d) Velocidad orbital de la MIR:</strong><br>
                     Igualamos fuerza gravitatoria a fuerza centrípeta (\\(F_g = F_c\\)): &nbsp &nbsp &nbsp \\( G \\dfrac{M_T \\cdot m}{r^2} =  m \\cdot \\dfrac{v^2}{r} \\quad  \\rightarrow \\quad  G \\dfrac{M_T }{r} = v^2 \\) <br>
-                    \\[ v = \\sqrt{\\frac{G \\cdot M_T}{r}} = \\sqrt{\\frac{6,67 \\cdot 10^{-11} \\cdot 5,95 \\cdot 10^{24}}{6571000}} \\]<br>
+                    \\[ v = \\sqrt{\\frac{G \\cdot M_T}{r}} = \\sqrt{\\frac{6,67 \\cdot 10^{-11} \\cdot 5,95 \\cdot 10^{24}}{6571000}} \\]
                     <span class='resultado'>Resultado:  &nbsp v = 7771,5 m/s</span>
                 </div>
                 <div class='paso'>
@@ -191,13 +191,13 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>a) Tensión de la cuerda:</strong><br>
                     En un movimiento circular en el plano horizontal, el cable es el único elemento que tira del martillo hacia el centro. Por tanto, la tensión (\\(T\\)) actúa íntegramente como fuerza centrípeta (\\(T = F_c\\)):
-                    \\[ T = m \\cdot \\frac{v^2}{r} = 7,26 \\cdot \\frac{30^2}{1,22} = 7,26 \\cdot \\frac{900}{1,22} \\]<br>
+                    \\[ T = m \\cdot \\frac{v^2}{r} = 7,26 \\cdot \\frac{30^2}{1,22} = 7,26 \\cdot \\frac{900}{1,22} \\]
                     <span class='resultado'>Resultado:  &nbsp \\( T = 5355,74 \\) N</span>
                 </div>
                 <div class='paso'>
                     <strong>b) Fuerza centrípeta que actúa a través de la cuerda:</strong><br>
                     Como hemos justificado en el apartado anterior, la fuerza centrípeta no es una fuerza independiente, sino el papel dinámico que asume la tensión de la cuerda en este instante.<br>
-                    \\[ F_c = T \\]<br>
+                    \\[ F_c = T \\]
                     <span class='resultado'>Resultado:  &nbsp \\( F_c = 5355,74 \\) N</span>
                 </div>
             `
@@ -218,21 +218,21 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>a) Tensión en el punto más alto:</strong><br>
                     En el punto más alto, tanto el peso (\\(P\\)) como la tensión de tu brazo (\\(T\\)) tiran del cubo hacia abajo (hacia el centro de rotación). Ambas suman para aportar la fuerza centrípeta: \\( T + P = F_c \\)<br>
-                    \\[ T_{alta} = F_c - P = 33,19 - 2,94 \\]<br>
+                    \\[ T_{alta} = F_c - P = 33,19 - 2,94 \\]
                     <span class='resultado'>Resultado:  &nbsp \\( T_{alta} = 30,25 \\) N</span>
                 </div>
                 <div class='paso'>
                     <strong>b) Tensión en el punto más bajo:</strong><br>
                     En el punto más bajo, la tensión tira hacia arriba (hacia el centro) pero el peso tira hacia abajo (hacia afuera). Aquí la tensión tiene que contrarrestar el peso y además proporcionar la fuerza centrípeta: \\( T - P = F_c \\)<br>
-                    \\[ T_{baja} = F_c + P = 33,19 + 2,94 \\]<br>
+                    \\[ T_{baja} = F_c + P = 33,19 + 2,94 \\]
                     <span class='resultado'>Resultado:  &nbsp \\( T_{baja} = 36,13 \\) N</span>
                 </div>
                 <div class='paso'>
                     <strong>c) Velocidad mínima para que el agua no caiga:</strong><br>
                     Para que el agua no se derrame en el punto más alto, su caída libre (el peso) debe ser exactamente igual a la fuerza centrípeta requerida para tomar la curva. En ese instante límite, la tensión es cero (\\( T = 0 \\)):<br>
-                    \\[ P = F_c \\implies m \\cdot g = m \\cdot \\frac{v_{min}^2}{R} \\]<br>
+                    \\[ P = F_c \\implies m \\cdot g = m \\cdot \\frac{v_{min}^2}{R} \\]
                     Las masas se cancelan, y despejando la velocidad obtenemos:<br>
-                    \\[ v_{min} = \\sqrt{g \\cdot R} = \\sqrt{9,8 \\cdot 0,7} \\]<br>
+                    \\[ v_{min} = \\sqrt{g \\cdot R} = \\sqrt{9,8 \\cdot 0,7} \\]
                     <span class='resultado'>Resultado:  &nbsp \\( v_{min} = 2,62 \\) m/s</span>
                 </div>
             `
@@ -254,20 +254,20 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>b) Valor de la fuerza de rozamiento:</strong><br>
                     Como el rozamiento actúa como fuerza centrípeta (\\(F_r = F_c\\)), aplicamos la fórmula directamente:<br>
-                    \\[ F_r = m \\cdot \\frac{v^2}{R} = 1900 \\cdot \\frac{25^2}{100} = 1900 \\cdot \\frac{625}{100} \\]<br>
+                    \\[ F_r = m \\cdot \\frac{v^2}{R} = 1900 \\cdot \\frac{25^2}{100} = 1900 \\cdot \\frac{625}{100} \\]
                     <span class='resultado'>Resultado:  &nbsp \\( F_r = 11875 \\) N</span>
                 </div>
                 <div class='paso'>
                     <strong>c) Factores que condicionan la velocidad máxima:</strong><br>
                     Si igualamos la fuerza de rozamiento máxima (\\( F_{r,max} = \\mu \\cdot N = \\mu \\cdot m \\cdot g \\)) a la fuerza centrípeta, vemos qué ocurre:<br>
-                    \\[ \\mu \\cdot m \\cdot g = m \\cdot \\frac{v_{max}^2}{R} \\implies v_{max} = \\sqrt{\\mu \\cdot g \\cdot R} \\]<br>
+                    \\[ \\mu \\cdot m \\cdot g = m \\cdot \\frac{v_{max}^2}{R} \\implies v_{max} = \\sqrt{\\mu \\cdot g \\cdot R} \\]
                     <span class='resultado'>Resultado:  &nbsp Al cancelarse la masa (m), la velocidad máxima depende SOLO del radio de la curva (\\(R\\)), de la gravedad (\\(g\\)) y del estado del asfalto/neumáticos (coeficiente \\(\\mu\\)). ¡Un camión y una moto tienen la misma velocidad límite para derrapar!</span>
                 </div>
                 <div class='paso'>
                     <strong>d) Velocidad máxima antes de derrapar (\\(\\mu = 0,8\\)):</strong><br>
                     Aplicamos la fórmula que acabamos de deducir en el apartado anterior para hallar el límite físico de la curva:<br>
-                    \\[ v_{max} = \\sqrt{\\mu \\cdot g \\cdot R} = \\sqrt{0,8 \\cdot 9,8 \\cdot 100} = \\sqrt{784} \\]<br>
-                    \\[ v_{max} = 28 \\text{ m/s} \\]<br>
+                    \\[ v_{max} = \\sqrt{\\mu \\cdot g \\cdot R} = \\sqrt{0,8 \\cdot 9,8 \\cdot 100} = \\sqrt{784} \\]
+                    \\[ v_{max} = 28 \\text{ m/s} \\]
                     <span class='resultado'>Resultado:  &nbsp \\( v_{max} = 28 \\text{ m/s} \\) (que equivalen a 100,8 km/h). Si entra a más de esa velocidad, se saldrá de la curva.</span>
                 </div>
             `
@@ -305,11 +305,11 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>Cálculo de la velocidad máxima:</strong><br>
                     Dividimos la ecuación del eje X entre la del eje Y. Fíjate que la masa (\\(m\\)) y la normal (\\(N\\)) se cancelan, demostrando que la velocidad máxima es independiente del peso del coche:<br>
-                    \\[\\frac{\\sin\\theta + \\mu\\cos\\theta}{\\cos\\theta - \\mu\\sin\\theta} = \\frac{v^2}{R \\cdot g}\\]<br>
+                    \\[\\frac{\\sin\\theta + \\mu\\cos\\theta}{\\cos\\theta - \\mu\\sin\\theta} = \\frac{v^2}{R \\cdot g}\\]
                     Dividiendo todo el lado izquierdo entre \\(\\cos\\theta\\) para simplificar (recordando que \\(\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}\\)), obtenemos la fórmula general:<br>
-                    \\[v_{max} = \\sqrt{R \\cdot g \\cdot \\frac{\\tan\\theta + \\mu}{1 - \\mu\\tan\\theta}}\\]<br>
+                    \\[v_{max} = \\sqrt{R \\cdot g \\cdot \\frac{\\tan\\theta + \\mu}{1 - \\mu\\tan\\theta}}\\]
                     Sustituimos los datos del problema: \\(R = 60\\) m, \\(g = 9,8 \\text{ m/s}^2\\), \\(\\theta = 5^\\circ\\), \\(\\mu = 0,55\\):<br>
-                    \\[v_{max} = \\sqrt{60 \\cdot 9,8 \\cdot \\frac{\\tan(5^\\circ) + 0,55}{1 - 0,55 \\cdot \\tan(5^\\circ)}} = \\sqrt{588 \\cdot \\frac{0,0875 + 0,55}{1 - 0,0481}} = \\sqrt{588 \\cdot 0,6697}\\]<br>
+                    \\[v_{max} = \\sqrt{60 \\cdot 9,8 \\cdot \\frac{\\tan(5^\\circ) + 0,55}{1 - 0,55 \\cdot \\tan(5^\\circ)}} = \\sqrt{588 \\cdot \\frac{0,0875 + 0,55}{1 - 0,0481}} = \\sqrt{588 \\cdot 0,6697}\\]
                     <span class='resultado'>Resultado:  &nbsp \\(v_{max} = 19,84 \\text{ m/s}\\) (aprox. 71,4 km/h)</span>
                 </div>
                 <div class='paso'>
@@ -332,12 +332,12 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>a) Radio mínimo de la curva:</strong><br>
                     Utilizamos el mismo análisis de fuerzas que en un coche sobre un peralte. Para que el motorista no derrape hacia el exterior, la fuerza de rozamiento (\\(f_r\\)) debe tirar de él hacia abajo del plano inclinado. La ecuación general que relaciona la velocidad, el radio, el ángulo del peralte y el rozamiento es:<br>
-                    \\[ \\frac{v^2}{R \\cdot g} = \\frac{\\sin\\theta + \\mu\\cos\\theta}{\\cos\\theta - \\mu\\sin\\theta} = \\frac{\\tan\\theta + \\mu}{1 - \\mu\\tan\\theta} \\]<br>
+                    \\[ \\frac{v^2}{R \\cdot g} = \\frac{\\sin\\theta + \\mu\\cos\\theta}{\\cos\\theta - \\mu\\sin\\theta} = \\frac{\\tan\\theta + \\mu}{1 - \\mu\\tan\\theta} \\]
                     En este caso, nuestra incógnita es el radio (\\(R\\)). Le damos la vuelta a la fracción y despejamos \\(R\\):<br>
-                    \\[ R_{min} = \\frac{v^2}{g} \\cdot \\frac{1 - \\mu\\tan\\theta}{\\tan\\theta + \\mu} \\]<br>
+                    \\[ R_{min} = \\frac{v^2}{g} \\cdot \\frac{1 - \\mu\\tan\\theta}{\\tan\\theta + \\mu} \\]
                     Sustituimos los datos (\\(v = 15 \\text{ m/s}\\), \\(g = 9,8 \\text{ m/s}^2\\), \\(\\theta = 37^\\circ\\), \\(\\mu = 0,3\\)).<br>
-                    \\[ R_{min} = \\frac{15^2}{9,8} \\cdot \\frac{1 - 0,3 \\cdot 0,75}{0,75 + 0,3} = \\frac{225}{9,8} \\cdot \\frac{1 - 0,225}{1,05} \\]<br>
-                    \\[ R_{min} = 22,96 \\cdot \\frac{0,775}{1,05} = 22,96 \\cdot 0,738 \\]<br>
+                    \\[ R_{min} = \\frac{15^2}{9,8} \\cdot \\frac{1 - 0,3 \\cdot 0,75}{0,75 + 0,3} = \\frac{225}{9,8} \\cdot \\frac{1 - 0,225}{1,05} \\]
+                    \\[ R_{min} = 22,96 \\cdot \\frac{0,775}{1,05} = 22,96 \\cdot 0,738 \\]
                     <span class='resultado'>Resultado:  &nbsp \\(R_{min} = 16,94 \\text{ m}\\)</span>
                 </div>
                 <div class='paso'>
@@ -363,14 +363,14 @@ const baseDatosProblemas = {
                     Recopilamos los datos del circuito: radio \\(R = 150 \\text{ m}\\), gravedad \\(g = 9,8 \\text{ m/s}^2\\), ángulo \\(\\theta = 15^\\circ\\) y rozamiento \\(\\mu = 0,7\\).<br>
                     Primero calculamos el valor de la tangente para simplificar: \\(\\tan(15^\\circ) \\approx 0,268\\).<br>
                     Sustituimos en la ecuación:<br>
-                    \\[ v_{max} = \\sqrt{150 \\cdot 9,8 \\cdot \\frac{0,268 + 0,7}{1 - 0,7 \\cdot 0,268}} = \\sqrt{1470 \\cdot \\frac{0,968}{1 - 0,1876}} \\]<br>
-                    \\[ v_{max} = \\sqrt{1470 \\cdot \\frac{0,968}{0,8124}} = \\sqrt{1470 \\cdot 1,1915} = \\sqrt{1751,5} \\]<br>
+                    \\[ v_{max} = \\sqrt{150 \\cdot 9,8 \\cdot \\frac{0,268 + 0,7}{1 - 0,7 \\cdot 0,268}} = \\sqrt{1470 \\cdot \\frac{0,968}{1 - 0,1876}} \\]
+                    \\[ v_{max} = \\sqrt{1470 \\cdot \\frac{0,968}{0,8124}} = \\sqrt{1470 \\cdot 1,1915} = \\sqrt{1751,5} \\]
                     \\[ v_{max} \\approx 41,85 \\text{ m/s} \\]
                 </div>
                 <div class='paso'>
                     <strong>Paso 3: Conversión a la unidad solicitada:</strong><br>
                     El problema nos pide específicamente la velocidad en km/h, así que aplicamos el factor de conversión (multiplicar por 3,6):<br>
-                    \\[ v_{max \\text{ (km/h)}} = 41,85 \\text{ m/s} \\cdot 3,6 \\text{ km/h por m/s} = 150,66 \\text{ km/h} \\]<br>
+                    \\[ v_{max \\text{ (km/h)}} = 41,85 \\text{ m/s} \\cdot 3,6 \\text{ km/h por m/s} = 150,66 \\text{ km/h} \\]
                     <span class='resultado'>Resultado: &nbsp El Rayo McQueen puede tomar la curva peligrosa a una velocidad máxima de 150,66 km/h. ¡Si supera esa velocidad, acabará contra el muro!</span>
                 </div>
             `
@@ -390,17 +390,17 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>a) Fuerza eléctrica entre el protón y el electrón:</strong><br>
                     Aplicamos la Ley de Coulomb. Dado que queremos el módulo de la fuerza (la intensidad de la atracción), usamos los valores absolutos de las cargas:<br>
-                    \\[ F = k \\cdot \\frac{|q_p \\cdot q_e|}{r^2} \\]<br>
+                    \\[ F = k \\cdot \\frac{|q_p \\cdot q_e|}{r^2} \\]
                     Sustituimos los datos suministrados en el problema:<br>
-                    \\[ F = 9 \\cdot 10^9 \\cdot \\frac{(1,602 \\cdot 10^{-19}) \\cdot (1,602 \\cdot 10^{-19})}{(0,5 \\cdot 10^{-10})^2} \\]<br>
-                    \\[ F = 9 \\cdot 10^9 \\cdot \\frac{2,566 \\cdot 10^{-38}}{0,25 \\cdot 10^{-20}} = 9 \\cdot 10^9 \\cdot 10,264 \\cdot 10^{-18} \\]<br>
+                    \\[ F = 9 \\cdot 10^9 \\cdot \\frac{(1,602 \\cdot 10^{-19}) \\cdot (1,602 \\cdot 10^{-19})}{(0,5 \\cdot 10^{-10})^2} \\]
+                    \\[ F = 9 \\cdot 10^9 \\cdot \\frac{2,566 \\cdot 10^{-38}}{0,25 \\cdot 10^{-20}} = 9 \\cdot 10^9 \\cdot 10,264 \\cdot 10^{-18} \\]
                     <span class='resultado'>Resultado:  &nbsp \\( F \\approx 9,24 \\cdot 10^{-8} \\text{ N} \\)</span>
                 </div>
                 <div class='paso'>
                     <strong>b) Aceleración inicial del electrón:</strong><br>
                     Para relacionar la fuerza eléctrica con el movimiento de la partícula, recurrimos a la Segunda Ley de Newton (\\( F = m \\cdot a \\)). Despejamos la aceleración usando la masa del electrón:<br>
-                    \\[ a = \\frac{F}{m_e} = \\frac{9,24 \\cdot 10^{-8} \\text{ N}}{9,1 \\cdot 10^{-31} \\text{ kg}} \\]<br>
-                    \\[ a \\approx 1,015 \\cdot 10^{23} \\text{ m/s}^2 \\]<br>
+                    \\[ a = \\frac{F}{m_e} = \\frac{9,24 \\cdot 10^{-8} \\text{ N}}{9,1 \\cdot 10^{-31} \\text{ kg}} \\]
+                    \\[ a \\approx 1,015 \\cdot 10^{23} \\text{ m/s}^2 \\]
                     <em>*Nota: Esta aceleración es brutalmente inmensa, lo cual es típico en física de partículas debido a que su masa es increíblemente pequeña.</em><br>
                     <span class='resultado'>Resultado:  &nbsp \\( a \\approx 1,015 \\cdot 10^{23} \\text{ m/s}^2 \\)</span>
                 </div>
@@ -410,7 +410,7 @@ const baseDatosProblemas = {
                     Si queremos que la nueva fuerza sea \\( \\frac{F}{4} \\), el denominador de la fracción debe multiplicarse por 4.<br>
                     Para que \\( r^2 \\) se multiplique por 4, la propia distancia \\( r \\) debe multiplicarse por 2 (ya que \\( 2^2 = 4 \\)).<br>
                     Por tanto, la nueva distancia debe ser el doble de la original:<br>
-                    \\[ r' = 2 \\cdot r = 2 \\cdot 0,5 \\text{ Å} \\]<br>
+                    \\[ r' = 2 \\cdot r = 2 \\cdot 0,5 \\text{ Å} \\]
                     <span class='resultado'>Resultado:  &nbsp \\( r' = 1,0 \\text{ Å} \\) (o \\( 10^{-10} \\text{ m} \\))</span>
                 </div>
             `
@@ -441,16 +441,16 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>c) Fuerza que experimenta en el vértice:</strong><br>
                     Calculamos la fuerza de atracción (en módulo) que ejerce UNA de las cargas positivas sobre la negativa mediante la Ley de Coulomb:<br>
-                    \\[ F_1 = k \\cdot \\frac{|q_1 \\cdot q_2|}{L^2} = 9 \\cdot 10^9 \\cdot \\frac{(5 \\cdot 10^{-9}) \\cdot (5 \\cdot 10^{-9})}{(0,6)^2} \\]<br>
-                    \\[ F_1 = 9 \\cdot 10^9 \\cdot \\frac{25 \\cdot 10^{-18}}{0,36} = \\frac{225 \\cdot 10^{-9}}{0,36} = 6,25 \\cdot 10^{-7} \\text{ N} \\]<br>
+                    \\[ F_1 = k \\cdot \\frac{|q_1 \\cdot q_2|}{L^2} = 9 \\cdot 10^9 \\cdot \\frac{(5 \\cdot 10^{-9}) \\cdot (5 \\cdot 10^{-9})}{(0,6)^2} \\]
+                    \\[ F_1 = 9 \\cdot 10^9 \\cdot \\frac{25 \\cdot 10^{-18}}{0,36} = \\frac{225 \\cdot 10^{-9}}{0,36} = 6,25 \\cdot 10^{-7} \\text{ N} \\]
                     Dado que el triángulo es equilátero, el ángulo que forma cada fuerza con el eje vertical (la bisectriz) es de \\(30^\\circ\\). La fuerza total neta será el doble de la componente vertical de \\(F_1\\):<br>
-                    \\[ F_{total} = 2 \\cdot F_y = 2 \\cdot F_1 \\cdot \\cos(30^\\circ) = 2 \\cdot 6,25 \\cdot 10^{-7} \\cdot \\frac{\\sqrt{3}}{2} \\]<br>
+                    \\[ F_{total} = 2 \\cdot F_y = 2 \\cdot F_1 \\cdot \\cos(30^\\circ) = 2 \\cdot 6,25 \\cdot 10^{-7} \\cdot \\frac{\\sqrt{3}}{2} \\]
                     <span class='resultado'>Resultado: &nbsp \\( F_{total} = 6,25 \\cdot \\sqrt{3} \\cdot 10^{-7} \\approx 1,08 \\cdot 10^{-6} \\text{ N} \\) (hacia abajo)</span>
                 </div>
                 <div class='paso'>
                     <strong>d) Aceleración en dicho vértice:</strong><br>
                     Para hallar la aceleración, simplemente aplicamos la Segunda Ley de Newton (\\( F = m \\cdot a \\)):<br>
-                    \\[ a = \\frac{F_{total}}{m} = \\frac{1,0825 \\cdot 10^{-6} \\text{ N}}{5 \\cdot 10^{-3} \\text{ kg}} \\]<br>
+                    \\[ a = \\frac{F_{total}}{m} = \\frac{1,0825 \\cdot 10^{-6} \\text{ N}}{5 \\cdot 10^{-3} \\text{ kg}} \\]
                     <span class='resultado'>Resultado: &nbsp \\( a \\approx 2,165 \\cdot 10^{-4} \\text{ m/s}^2 \\) (hacia abajo)</span>
                 </div>
             `
@@ -464,7 +464,7 @@ const baseDatosProblemas = {
                     Observando el esquema, tenemos un sistema simétrico. La carga positiva \\(q_1\\) es atraída por las cargas negativas \\(q_2\\) y \\(q_3\\).<br>
                     Conocemos la distancia entre las cargas (la hipotenusa del triángulo formado, \\( r = 3,5 \\text{ m} \\)) y la altura vertical respecto al eje X (\\( y = 1,5 \\text{ m} \\)).<br>
                     Calculamos la distancia en el eje X (cateto contiguo) usando el Teorema de Pitágoras:<br>
-                    \\[ x = \\sqrt{r^2 - y^2} = \\sqrt{3,5^2 - 1,5^2} = \\sqrt{12,25 - 2,25} = \\sqrt{10} \\approx 3,16 \\text{ m} \\]<br>
+                    \\[ x = \\sqrt{r^2 - y^2} = \\sqrt{3,5^2 - 1,5^2} = \\sqrt{12,25 - 2,25} = \\sqrt{10} \\approx 3,16 \\text{ m} \\]
                     Con esto, extraemos el coseno del ángulo \\(\\alpha\\) (ángulo entre la fuerza y el eje X), que usaremos para proyectar los vectores:<br>
                     \\[ \\cos(\\alpha) = \\frac{\\text{cateto contiguo}}{\\text{hipotenusa}} = \\frac{\\sqrt{10}}{3,5} \\approx 0,9035 \\]
                 </div>
@@ -472,16 +472,16 @@ const baseDatosProblemas = {
                     <strong>a) Fuerza que experimenta la carga 1:</strong><br>
                     Primero, calculamos el módulo de la fuerza de atracción entre \\(q_1\\) y \\(q_2\\) (Ley de Coulomb). Al tener \\(q_3\\) la misma carga y estar a la misma distancia, la fuerza \\(F_{31}\\) será idéntica en módulo.<br>
                     Pasamos las cargas a Culombios: \\( 3  \\mu \\text{ C} = 3 \\cdot 10^{-6} \\text{ C} \\).<br>
-                    \\[ F_{21} = k \\cdot \\frac{|q_1 \\cdot q_2|}{r^2} = 9 \\cdot 10^9 \\cdot \\frac{(3 \\cdot 10^{-6}) \\cdot (3 \\cdot 10^{-6})}{(3,5)^2} \\]<br>
-                    \\[ F_{21} = 9 \\cdot 10^9 \\cdot \\frac{9 \\cdot 10^{-12}}{12,25} = \\frac{0,081}{12,25} \\approx 6,612 \\cdot 10^{-3} \\text{ N} \\]<br>
+                    \\[ F_{21} = k \\cdot \\frac{|q_1 \\cdot q_2|}{r^2} = 9 \\cdot 10^9 \\cdot \\frac{(3 \\cdot 10^{-6}) \\cdot (3 \\cdot 10^{-6})}{(3,5)^2} \\]
+                    \\[ F_{21} = 9 \\cdot 10^9 \\cdot \\frac{9 \\cdot 10^{-12}}{12,25} = \\frac{0,081}{12,25} \\approx 6,612 \\cdot 10^{-3} \\text{ N} \\]
                     Por simetría, las componentes en el eje Y se anulan (una tira hacia arriba y otra hacia abajo con la misma intensidad). Las componentes en el eje X se suman:<br>
-                    \\[ F_{total} = 2 \\cdot F_{21x} = 2 \\cdot F_{21} \\cdot \\cos(\\alpha) = 2 \\cdot (6,612 \\cdot 10^{-3}) \\cdot 0,9035 \\]<br>
+                    \\[ F_{total} = 2 \\cdot F_{21x} = 2 \\cdot F_{21} \\cdot \\cos(\\alpha) = 2 \\cdot (6,612 \\cdot 10^{-3}) \\cdot 0,9035 \\]
                     <span class='resultado'>Resultado: &nbsp \\( F_{total} \\approx 1,195 \\cdot 10^{-2} \\text{ N} \\) (dirigida hacia la derecha, en el eje X positivo)</span>
                 </div>
                 <div class='paso'>
                     <strong>b) Aceleración que experimenta la carga 1:</strong><br>
                     Aplicamos la Segunda Ley de Newton. Pasamos la masa al Sistema Internacional: \\( m = 10 \\text{ g} = 0,01 \\text{ kg} \\).<br>
-                    \\[ a = \\frac{F_{total}}{m} = \\frac{1,195 \\cdot 10^{-2} \\text{ N}}{0,01 \\text{ kg}} \\]<br>
+                    \\[ a = \\frac{F_{total}}{m} = \\frac{1,195 \\cdot 10^{-2} \\text{ N}}{0,01 \\text{ kg}} \\]
                     <span class='resultado'>Resultado: &nbsp \\( a = 1,195 \\text{ m/s}^2 \\) (hacia la derecha)</span>
                 </div>
                 <div class='paso'>
@@ -502,20 +502,20 @@ const baseDatosProblemas = {
                     - Distancias: \\( d_{12} = d_{13} = 2 \\text{ nm} = 2 \\cdot 10^{-9} \\text{ m} \\). La distancia vertical entre \\(q_2\\) y \\(q_4\\) es \\( 1 \\text{ nm} = 1 \\cdot 10^{-9} \\text{ m} \\).<br>
                     - Masa de \\(q_1\\): \\( m = 1,33 \\cdot 10^{-22} \\text{ g} = 1,33 \\cdot 10^{-25} \\text{ kg} \\).<br>
                     Necesitamos la distancia horizontal desde \\(q_1\\) hasta \\(q_4\\) (llamémosla \\(x\\)). Usamos el Teorema de Pitágoras en el triángulo formado por \\(q_1\\), \\(q_4\\) y \\(q_2\\):<br>
-                    \\[ x^2 + (1 \\cdot 10^{-9})^2 = (2 \\cdot 10^{-9})^2 \\implies x^2 + 1 \\cdot 10^{-18} = 4 \\cdot 10^{-18} \\]<br>
-                    \\[ x = \\sqrt{3 \\cdot 10^{-18}} = \\sqrt{3} \\cdot 10^{-9} \\text{ m} \\approx 1,732 \\cdot 10^{-9} \\text{ m} \\]<br>
+                    \\[ x^2 + (1 \\cdot 10^{-9})^2 = (2 \\cdot 10^{-9})^2 \\implies x^2 + 1 \\cdot 10^{-18} = 4 \\cdot 10^{-18} \\]
+                    \\[ x = \\sqrt{3 \\cdot 10^{-18}} = \\sqrt{3} \\cdot 10^{-9} \\text{ m} \\approx 1,732 \\cdot 10^{-9} \\text{ m} \\]
                     Esta es la distancia \\(r_{14}\\). Además, el coseno del ángulo \\(\\alpha\\) que forma la fuerza de \\(q_2\\) con la horizontal es: \\( \\cos(\\alpha) = \\frac{cateto\\ contiguo}{hipotenusa} = \\frac{\\sqrt{3}}{2} \\).
                 </div>
                 <div class='paso'>
                     <strong>a) Fuerza que experimenta la carga 1 (ion bromuro):</strong><br>
                     Calculamos la fuerza atractiva que ejerce \\(q_2\\) sobre \\(q_1\\):<br>
-                    \\[ F_{21} = k \\cdot \\frac{|q_1 \\cdot q_2|}{r_{12}^2} = 9 \\cdot 10^9 \\cdot \\frac{1 \\cdot 10^{-19} \\cdot 0,8 \\cdot 10^{-19}}{(2 \\cdot 10^{-9})^2} = 9 \\cdot 10^9 \\cdot \\frac{0,8 \\cdot 10^{-38}}{4 \\cdot 10^{-18}} = 1,8 \\cdot 10^{-11} \\text{ N} \\]<br>
+                    \\[ F_{21} = k \\cdot \\frac{|q_1 \\cdot q_2|}{r_{12}^2} = 9 \\cdot 10^9 \\cdot \\frac{1 \\cdot 10^{-19} \\cdot 0,8 \\cdot 10^{-19}}{(2 \\cdot 10^{-9})^2} = 9 \\cdot 10^9 \\cdot \\frac{0,8 \\cdot 10^{-38}}{4 \\cdot 10^{-18}} = 1,8 \\cdot 10^{-11} \\text{ N} \\]
                     Por simetría, la fuerza que ejerce \\(q_3\\) es igual: \\( F_{31} = 1,8 \\cdot 10^{-11} \\text{ N} \\).<br>
                     Las componentes Y se anulan. Las componentes X se suman: \\( F_{21x} + F_{31x} = 2 \\cdot F_{21} \\cdot \\cos(\\alpha) = 2 \\cdot 1,8 \\cdot 10^{-11} \\cdot \\frac{\\sqrt{3}}{2} \\approx 3,118 \\cdot 10^{-11} \\text{ N} \\).<br>
                     Calculamos la fuerza directa que ejerce el carbocatión central \\(q_4\\) (es puramente horizontal):<br>
-                    \\[ F_{41} = k \\cdot \\frac{|q_1 \\cdot q_4|}{r_{14}^2} = 9 \\cdot 10^9 \\cdot \\frac{1 \\cdot 10^{-19} \\cdot 0,8 \\cdot 10^{-19}}{(\\sqrt{3} \\cdot 10^{-9})^2} = 9 \\cdot 10^9 \\cdot \\frac{0,8 \\cdot 10^{-38}}{3 \\cdot 10^{-18}} = 2,4 \\cdot 10^{-11} \\text{ N} \\]<br>
+                    \\[ F_{41} = k \\cdot \\frac{|q_1 \\cdot q_4|}{r_{14}^2} = 9 \\cdot 10^9 \\cdot \\frac{1 \\cdot 10^{-19} \\cdot 0,8 \\cdot 10^{-19}}{(\\sqrt{3} \\cdot 10^{-9})^2} = 9 \\cdot 10^9 \\cdot \\frac{0,8 \\cdot 10^{-38}}{3 \\cdot 10^{-18}} = 2,4 \\cdot 10^{-11} \\text{ N} \\]
                     Sumamos todo el empuje horizontal:<br>
-                    \\[ F_{total\_1} = 3,118 \\cdot 10^{-11} + 2,4 \\cdot 10^{-11} = 5,518 \\cdot 10^{-11} \\text{ N} \\]<br>
+                    \\[ F_{total\_1} = 3,118 \\cdot 10^{-11} + 2,4 \\cdot 10^{-11} = 5,518 \\cdot 10^{-11} \\text{ N} \\]
                     <span class='resultado'>Resultado: &nbsp \\( F_1 \\approx 5,52 \\cdot 10^{-11} \\text{ N} \\) (hacia la derecha)</span>
                 </div>
                 <div class='paso'>
@@ -528,7 +528,7 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>c) Aceleración del ion bromuro (carga 1):</strong><br>
                     Aplicamos la Segunda Ley de Newton:\\( F = m \\cdot a \\):<br>
-                    \\[ a = \\frac{F_{total\_1}}{m_1} = \\frac{5,518 \\cdot 10^{-11} \\text{ N}}{1,33 \\cdot 10^{-25} \\text{ kg}} \\]<br>
+                    \\[ a = \\frac{F_{total\_1}}{m_1} = \\frac{5,518 \\cdot 10^{-11} \\text{ N}}{1,33 \\cdot 10^{-25} \\text{ kg}} \\]
                     <span class='resultado'>Resultado: &nbsp \\( a \\approx 4,15 \\cdot 10^{14} \\text{ m/s}^2 \\) (hacia la derecha)</span>
                 </div>
                 <div class='paso'>
@@ -563,26 +563,26 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>a) Cálculo de la aceleración:</strong><br>
                     Aplicamos la segunda ley de Newton (\\( \\sum \\vec{F} = m \\cdot \\vec{a} \\)) en el eje del movimiento (X):<br>
-                    \\[ \\sum F_x = m \\cdot a \\implies P_x - F_R = m \\cdot a \\]<br>
+                    \\[ \\sum F_x = m \\cdot a \\implies P_x - F_R = m \\cdot a \\]
                     Sabemos que la fuerza de rozamiento es \\( F_R = \\mu_c \\cdot N \\), y sustituyendo \\( N \\) por su valor:\\( F_R = \\mu_c \\cdot m \\cdot g \\cdot \\cos(25^{\\circ}) \\).<br>
                     Sustituimos las expresiones de las fuerzas en la ecuación de Newton:<br>
-                    \\[ m \\cdot g \\cdot \\text{sen}(25^{\\circ}) - \\mu_c \\cdot (m \\cdot g \\cdot \\cos(25^{\\circ})) = m \\cdot a \\]<br>
+                    \\[ m \\cdot g \\cdot \\text{sen}(25^{\\circ}) - \\mu_c \\cdot (m \\cdot g \\cdot \\cos(25^{\\circ})) = m \\cdot a \\]
                     Podemos simplificar la masa (\\( m \\)) en todos los términos (la aceleración no depende de la masa):<br>
-                    \\[ g \\cdot \\text{sen}(25^{\\circ}) - \\mu_c \\cdot g \\cdot \\cos(25^{\\circ}) = a \\]<br>
+                    \\[ g \\cdot \\text{sen}(25^{\\circ}) - \\mu_c \\cdot g \\cdot \\cos(25^{\\circ}) = a \\]
                     Sacamos factor común \\( g \\) y calculamos:<br>
-                    \\[ a = 9,8 \\cdot (\\text{sen}(25^{\\circ}) - 0,35 \\cdot \\cos(25^{\\circ})) = 1,033 \\text{ m/s}^2 \\]<br>
+                    \\[ a = 9,8 \\cdot (\\text{sen}(25^{\\circ}) - 0,35 \\cdot \\cos(25^{\\circ})) = 1,033 \\text{ m/s}^2 \\]
                     <span class='resultado'>Resultado: La aceleración de descenso es de \\( 1,033 \\text{ m/s}^2 \\).</span>
                 </div>
 
                 <div class='paso'>
                     <strong>b) Cálculo del tiempo para alcanzar la velocidad de 20 m/s:</strong><br>
                     Este es un problema de Movimiento Rectilíneo Uniformemente Acelerado (MRUA). Utilizamos la ecuación de la velocidad:<br>
-                    \\[ v = v_0 + a \\cdot t \\]<br>
+                    \\[ v = v_0 + a \\cdot t \\]
                     Datos conocidos: \\( v = 20 \\text{ m/s} \\), \\( v_0 = 5 \\text{ m/s} \\), \\( a = 1,033 \\text{ m/s}^2 \\).<br>
                     Despejamos el tiempo \\( t \\):<br>
-                    \\[ t = \\frac{v - v_0}{a} \\]<br>
+                    \\[ t = \\frac{v - v_0}{a} \\]
                     Sustituimos los valores:<br>
-                    \\[ t = \\frac{20 - 5}{1,033} = \\frac{15}{1,033} \\approx 14,52 \\text{ s} \\]<br>
+                    \\[ t = \\frac{20 - 5}{1,033} = \\frac{15}{1,033} \\approx 14,52 \\text{ s} \\]
                     <span class='resultado'>Resultado: Tarda aproximadamente \\( 14,52 \\) segundos en alcanzar esa velocidad.</span>
                 </div>
 
@@ -615,9 +615,9 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>a) Justificación del movimiento:</strong><br>
                     El bloque descenderá solo si la fuerza a favor del movimiento (\\( P_x \\)) es mayor que la resistencia máxima del rozamiento (\\( F_{e,max} \\)). Comparamos ambas expresiones:<br>
-                    \\[ ¿ m \\cdot g \\cdot \\text{sen}(20^{\\circ}) > \\mu_e \\cdot m \\cdot g \\cdot \\cos(20^{\\circ}) ? \\]<br>
+                    \\[ ¿ m \\cdot g \\cdot \\text{sen}(20^{\\circ}) > \\mu_e \\cdot m \\cdot g \\cdot \\cos(20^{\\circ}) ? \\]
                     Podemos simplificar \\( m \\cdot g \\) en ambos lados. La condición de movimiento se reduce a:<br>
-                    \\[ \\text{sen}(20^{\\circ}) > \\mu_e \\cdot \\cos(20^{\\circ}) \\]<br>
+                    \\[ \\text{sen}(20^{\\circ}) > \\mu_e \\cdot \\cos(20^{\\circ}) \\]
                     Calculamos los valores:<br>
                     - Fuerza motriz proporcional: \\( \\text{sen}(20^{\\circ}) \\approx 0,342 \\)<br>
                     - Resistencia proporcional: \\( 0,4 \\cdot \\cos(20^{\\circ}) \\approx 0,4 \\cdot 0,940 = 0,376 \\)<br>
@@ -704,20 +704,20 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>c) ¿Con qué aceleración se moverán?</strong><br>
                     <em>(Resolvemos c antes que b por facilidad algebraica)</em>. Aplicamos la segunda ley de Newton al sistema completo. La fuerza neta es la diferencia de pesos:<br>
-                    \\[ F_{neta} = m_{total} \\cdot a \\]<br>
-                    \\[ P_2 - P_1 = (m_1 + m_2) \\cdot a \\]<br>
+                    \\[ F_{neta} = m_{total} \\cdot a \\]
+                    \\[ P_2 - P_1 = (m_1 + m_2) \\cdot a \\]
                     Sustituimos valores:<br>
-                    \\[ 4,90 - 3,92 = (0,4 + 0,5) \\cdot a \\]<br>
-                    \\[ 0,98 = 0,9 \\cdot a \\implies a = \\frac{0,98}{0,9} \\approx 1,089 \\text{ m/s}^2 \\]<br>
+                    \\[ 4,90 - 3,92 = (0,4 + 0,5) \\cdot a \\]
+                    \\[ 0,98 = 0,9 \\cdot a \\implies a = \\frac{0,98}{0,9} \\approx 1,089 \\text{ m/s}^2 \\]
                     <span class='resultado'>Resultado: La aceleración es de \\( 1,09 \\text{ m/s}^2 \\).</span>
                 </div>
 
                 <div class='paso'>
                     <strong>b) ¿Cuál es la tensión de la cuerda?</strong><br>
                     Analizamos una de las masas por separado (por ejemplo, la masa \\( m_1 \\) que sube):<br>
-                    \\[ T - P_1 = m_1 \\cdot a \\]<br>
-                    \\[ T = P_1 + (m_1 \\cdot a) \\]<br>
-                    \\[ T = 3,92 + (0,4 \\cdot 1,089) = 3,92 + 0,4356 \\]<br>
+                    \\[ T - P_1 = m_1 \\cdot a \\]
+                    \\[ T = P_1 + (m_1 \\cdot a) \\]
+                    \\[ T = 3,92 + (0,4 \\cdot 1,089) = 3,92 + 0,4356 \\]
                     <span class='resultado'>Resultado: La tensión de la cuerda es de \\( 4,356 \\text{ N} \\).</span>
                 </div>
 
@@ -832,7 +832,7 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>a) El coeficiente de rozamiento (\\( \\mu \\)):</strong><br>
                     Durante el ascenso, tanto el peso tangencial como el rozamiento frenan al muñeco:<br>
-                    \\[ \\sum F_x = m \\cdot a_a \\implies -m \\cdot g \\cdot \\text{sen}(37^{\\circ}) - \\mu \\cdot m \\cdot g \\cdot \\cos(37^{\\circ}) = m \\cdot a_a \\]<br>
+                    \\[ \\sum F_x = m \\cdot a_a \\implies -m \\cdot g \\cdot \\text{sen}(37^{\\circ}) - \\mu \\cdot m \\cdot g \\cdot \\cos(37^{\\circ}) = m \\cdot a_a \\]
                     Simplificamos la masa y despejamos \\( \\mu \\):<br>
                     \\[ -9,8 \\cdot 0,6018 - \\mu \\cdot 9,8 \\cdot 0,7986 = -8,003 \\]
                     \\[ -5,898 - 7,826 \\cdot \\mu = -8,003 \\]
@@ -956,16 +956,16 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>a) Cálculo del momento inicial</strong><br>
                     Calculamos el momento aplicado originalmente, que representa el esfuerzo de rotación necesario para abrir la puerta:<br>
-                    \\[ M_1 = F_1 \\cdot d_1 = 2 \\text{ N} \\cdot 0,4 \\text{ m} = 0,8 \\text{ N} \\cdot \\text{m} \\]<br>
+                    \\[ M_1 = F_1 \\cdot d_1 = 2 \\text{ N} \\cdot 0,4 \\text{ m} = 0,8 \\text{ N} \\cdot \\text{m} \\]
                     <span class='resultado'>Resultado: El momento de la fuerza es de \\( 0,8 \\text{ N} \\cdot \\text{m} \\).</span>
                 </div>
 
                 <div class='paso'>
                     <strong>b) Evaluación de la nueva fuerza </strong><br>
                     Calculamos el momento que se generaría en la segunda situación propuesta:<br>
-                    \\[ M_2 = F_2 \\cdot d_2 = 3 \\text{ N} \\cdot 0,2 \\text{ m} = 0,6 \\text{ N} \\cdot \\text{m} \\]<br>
+                    \\[ M_2 = F_2 \\cdot d_2 = 3 \\text{ N} \\cdot 0,2 \\text{ m} = 0,6 \\text{ N} \\cdot \\text{m} \\]
                     Para que la puerta se abra, el momento aplicado debe ser igual o mayor al momento inicial requerido (\\( M_1 \\)). Comparando ambos valores:<br>
-                    \\[ 0,6 \\text{ N} \\cdot \\text{m} < 0,8 \\text{ N} \\cdot \\text{m} \\implies M_2 < M_1 \\]<br>
+                    \\[ 0,6 \\text{ N} \\cdot \\text{m} < 0,8 \\text{ N} \\cdot \\text{m} \\implies M_2 < M_1 \\]
                     <span class='resultado'>Resultado: Debido a que el momento generado es menor, la puerta NO se abrirá.</span>
                 </div>
                 `
@@ -985,15 +985,15 @@ const baseDatosProblemas = {
             <div class='paso'>
                 <strong>a) ¿Cuánto vale la fuerza resultante?</strong><br>
                 La fuerza resultante (\\( F_R \\)) es la suma vectorial de las fuerzas. Al ser paralelas, de igual magnitud pero sentidos opuestos:<br>
-                \\[ F_R = F_1 - F_2 = 10 \\text{ N} - 10 \\text{ N} = 0 \\text{ N} \\]<br>
+                \\[ F_R = F_1 - F_2 = 10 \\text{ N} - 10 \\text{ N} = 0 \\text{ N} \\]
                 <span class='resultado'>Resultado: La fuerza resultante es \\( 0 \\text{ N} \\). Esto significa que el volante no se desplazará linealmente.</span>
             </div>
 
             <div class='paso'>
                 <strong>b) ¿Cuánto vale el momento del par de fuerzas?</strong><br>
                 El momento de un par de fuerzas (\\( M \\)) se calcula multiplicando una de las fuerzas por la distancia (brazo) que las separa:<br>
-                \\[ M = F \\cdot d \\]<br>
-                \\[ M = 10 \\text{ N} \\cdot 0,6 \\text{ m} = 6 \\text{ N} \\cdot \\text{m} \\]<br>
+                \\[ M = F \\cdot d \\]
+                \\[ M = 10 \\text{ N} \\cdot 0,6 \\text{ m} = 6 \\text{ N} \\cdot \\text{m} \\]
                 <span class='resultado'>Resultado: El momento del par es \\( 6 \\text{ N} \\cdot \\text{m} \\).</span>
             </div>
 
@@ -1017,14 +1017,15 @@ const baseDatosProblemas = {
                     - Peso total a transportar: \\( P = 2000 \\text{ N} \\).<br>
                     - Fuerza del segundo hombre (extremo derecho): \\( F_2 = P - F_1 = 2000 \\text{ N} - 900 \\text{ N} = 1100 \\text{ N} \\).<br>
                     Llamaremos \\( x \\) a la distancia desde el hombre 1 (900 N) hasta el punto donde se cuelga el peso.
+                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/eq_3.png' style='max-width: 70%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
                 </div>
 
                 <div class='paso'>
                     <strong>Paso 2: Aplicación de la condición de equilibrio de rotación:</strong><br>
                     Para que la barra esté en equilibrio, elegimos el extremo del primer hombre como punto de giro. La suma de momentos respecto a ese punto debe ser cero:<br>
-                    \\[ \\sum M = 0 \\]<br>
+                    \\[ \\sum M = 0 \\]
                     El peso \\( P \\) genera un giro en un sentido y la fuerza del segundo hombre \\( F_2 \\) en sentido contrario a la distancia total de la barra:<br>
-                    \\[ P \\cdot x = F_2 \\cdot L \\]<br>
+                    \\[ P \\cdot x = F_2 \\cdot L \\]
                     Sustituimos los valores conocidos:<br>
                     \\[ 2000 \\text{ N} \\cdot x = 1100 \\text{ N} \\cdot 6 \\text{ m} \\]
                 </div>
@@ -1032,8 +1033,8 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>Paso 3: Resolución de la incógnita:</strong><br>
                     Despejamos la distancia \\( x \\):<br>
-                    \\[ x = \\frac{1100 \\cdot 6}{2000} \\]<br>
-                    \\[ x = \\frac{6600}{2000} = 3,3 \\text{ m} \\]<br>
+                    \\[ x = \\frac{1100 \\cdot 6}{2000} \\]
+                    \\[ x = \\frac{6600}{2000} = 3,3 \\text{ m} \\]
                     <span class='resultado'>Resultado: El peso debe colocarse a <strong>3,3 metros</strong> del hombre que soporta 900 N (o a 2,7 metros del hombre que soporta 1100 N).</span>
                 </div>`
         },
@@ -1046,7 +1047,7 @@ const baseDatosProblemas = {
                     <strong>Ecuación aplicada:</strong> \\( F_1 \\cdot d_1 = F_2 \\cdot d_2 \\)<br>
                     En este primer caso, observamos que el punto de apoyo está centrado respecto a las fuerzas, lo que significa que las distancias (brazos) son idénticas (\\( d_1 = d_2 = d \\)).<br>
                     Sustituyendo los valores:<br>
-                    \\[ 5 \\text{ N} \\cdot d = A \\cdot d \\]<br>
+                    \\[ 5 \\text{ N} \\cdot d = A \\cdot d \\]
                     Para que la igualdad se mantenga, si las distancias son iguales, las fuerzas también deben serlo. Al simplificar \\( d \\) en ambos lados:<br>
                     <span class='resultado'>Resultado: \\( A = 5 \\text{ N} \\)</span>
                 </div>
@@ -1055,9 +1056,9 @@ const baseDatosProblemas = {
                     <strong>Caso 2: Equilibrio con fuerzas distintas</strong><br>
                     <strong>Ecuación aplicada:</strong> \\( F_{izq} \\cdot d_{izq} = F_{der} \\cdot d_{der} \\)<br>
                     Aquí debemos hallar la distancia necesaria para que una fuerza mayor (15 N) equilibre a una menor (7,5 N).<br>
-                    \\[ 7,5 \\text{ N} \\cdot 20 \\text{ cm} = 15 \\text{ N} \\cdot d \\]<br>
+                    \\[ 7,5 \\text{ N} \\cdot 20 \\text{ cm} = 15 \\text{ N} \\cdot d \\]
                     Despejamos la distancia \\( d \\):<br>
-                    \\[ 150 \\text{ N} \\cdot \\text{cm} = 15 \\text{ N} \\cdot d \\implies d = \\frac{150}{15} \\]<br>
+                    \\[ 150 \\text{ N} \\cdot \\text{cm} = 15 \\text{ N} \\cdot d \\implies d = \\frac{150}{15} \\]
                     <span class='resultado'>Resultado: \\( d = 10 \\text{ cm} \\)</span>
                 </div>
 
@@ -1070,9 +1071,9 @@ const baseDatosProblemas = {
                     - Momento 2 (Izquierda): \\( 4 \\text{ N} \\cdot 15 \\text{ cm} \\)<br>
                     - Momento 3 (Derecha): \\( 50 \\text{ N} \\cdot 10 \\text{ cm} \\)<br>
                     Planteamos la ecuación completa:<br>
-                    \\[ (A \\cdot 35) + (4 \\cdot 15) = 50 \\cdot 10 \\]<br>
-                    \\[ 35A + 60 = 500 \\implies 35 \\cdot  A = 440 \\]<br>
-                    \\[ A = \\frac{440}{35} \\approx 12,571 \\text{ N} \\]<br>
+                    \\[ (A \\cdot 35) + (4 \\cdot 15) = 50 \\cdot 10 \\]
+                    \\[ 35A + 60 = 500 \\implies 35 \\cdot  A = 440 \\]
+                    \\[ A = \\frac{440}{35} \\approx 12,571 \\text{ N} \\]
                     <span class='resultado'>Resultado: \\( A \\approx 12,57 \\text{ N} \\)</span>
                 </div>`
         },
@@ -1101,17 +1102,17 @@ const baseDatosProblemas = {
                 <div class='paso'>
                     <strong>Paso 3: Cálculo del ángulo \\( \\alpha \\):</strong><br>
                     Sustituimos los valores de la fuerza y el peso:<br>
-                    \\[ \\tan(\\alpha) = \\frac{5,67 \\cdot 10^{-3}}{9,8 \\cdot 10^{-3}} = 0,5785 \\]<br>
+                    \\[ \\tan(\\alpha) = \\frac{5,67 \\cdot 10^{-3}}{9,8 \\cdot 10^{-3}} = 0,5785 \\]
                     Aplicando la función arcotangente (\\( \\tan^{-1} \\)):<br>
-                    \\[ \\alpha = \\text{arctan}(0,5785) \\approx 30^{\\circ} \\]<br>
+                    \\[ \\alpha = \\text{arctan}(0,5785) \\approx 30^{\\circ} \\]
                     <span class='resultado'>Resultado del ángulo: \\( \\alpha \\approx 30^{\\circ} \\)</span>
                 </div>
 
                 <div class='paso'>
                     <strong>Paso 4: Cálculo de la tensión del hilo:</strong><br>
                     Usamos la componente vertical para despejar \\( T \\):<br>
-                    \\[ T = \\frac{P}{\\cos(\\alpha)} = \\frac{9,8 \\cdot 10^{-3}}{\\cos(30^{\\circ})} \\]<br>
-                    \\[ T = \\frac{9,8 \\cdot 10^{-3}}{0,866} \\approx 11,31 \\cdot 10^{-3} \\text{ N} \\]<br>
+                    \\[ T = \\frac{P}{\\cos(\\alpha)} = \\frac{9,8 \\cdot 10^{-3}}{\\cos(30^{\\circ})} \\]
+                    \\[ T = \\frac{9,8 \\cdot 10^{-3}}{0,866} \\approx 11,31 \\cdot 10^{-3} \\text{ N} \\]
                     <span class='resultado'>Resultado de la tensión: \\( T \\approx 1,13 \\cdot 10^{-2} \\text{ N} \\)</span>
                 </div>`
         }
