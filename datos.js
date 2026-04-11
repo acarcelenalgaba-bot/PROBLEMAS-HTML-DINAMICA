@@ -1120,98 +1120,296 @@ const baseDatosProblemas = {
     "momento": [
         {
             titulo: "Problema 1: Pelota de tenis",
-            enunciado: "Una pelota de tenis de 50 g llega a un jugador con una velocidad de 20 m/s. Después de ser golpeada con una fuerza de 200 N sale despedida con una velocidad doble en sentido opuesto. ¿Cuánto tiempo ha estado en contacto la pelota con la raqueta?",
-            // solucion: `
-            //     <div class='paso'>
-            //         \\( F \\cdot \\Delta t = m(v_f - v_0) \\implies 200 \\cdot \\Delta t = 0,05(40 - (-20)) \\)<br>
-            //         <span class='resultado'>t = 0,015 s</span>
-            //     </div>
-            // `
+            enunciado: "Una pelota de tenis de 50 g llega a un jugador con una velocidad de 20 m/s. Después de ser golpeada con una fuerza de 200 N sale despedida con una velocidad doble en sentido opuesto. ¿Cuánto tiempo ha estado en contacto la pelota con la raqueta? <br> <div style='text-align: center; margin-bottom: 20px;'>  </div> <br> ",
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Identificación de datos y conversión al S.I.:</strong><br>
+                    Es crucial establecer un sistema de referencia. Definiremos como positivo el sentido del movimiento final de la pelota (hacia donde sale despedida).<br>
+                    - Masa de la pelota: \\( m = 50 \\text{ g} = 0,05 \\text{ kg} \\)<br>
+                    - Velocidad inicial: \\( v_0 = -20 \\text{ m/s} \\) (negativa porque va en sentido opuesto al final)<br>
+                    - Velocidad final: \\( v_f = 2 \\cdot 20 \\text{ m/s} = 40 \\text{ m/s} \\)<br>
+                    - Fuerza aplicada: \\( F = 200 \\text{ N} \\)
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 2: Aplicación del Teorema del Impulso Mecánico:</strong><br>
+                    El impulso aplicado a un cuerpo es igual a la variación de su cantidad de movimiento (\\( \\Delta p \\)):<br>
+                    \\[ I = F \\cdot \\Delta t = \\Delta p \\]
+                    \\[ F \\cdot \\Delta t = m \\cdot v_f - m \\cdot v_0 \\]
+                    Donde \\( \\Delta t \\) es el tiempo de contacto que deseamos encontrar.
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 3: Sustitución de valores y despeje:</strong><br>
+                    Sustituimos los valores teniendo especial cuidado con el signo de la velocidad inicial:<br>
+                    \\[ 200 \\cdot \\Delta t = 0,05 \\cdot 40 - 0,05 \\cdot (-20) \\]
+                    \\[ 200 \\cdot \\Delta t = 2 + 1 \\]
+                    \\[ 200 \\cdot \\Delta t = 3 \\]
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 4: Cálculo del tiempo final:</strong><br>
+                    Despejamos el intervalo de tiempo:<br>
+                    \\[ \\Delta t = \\frac{3}{200} = 0,015 \\text{ s} \\]
+                    <span class='resultado'>Resultado: El tiempo de contacto ha sido de \\( 0,015 \\text{ s} \\).</span>
+                </div>
+            `
         },
         {
             titulo: "Problema 2: Tenista servicio",
             enunciado: "Algunos tenistas logran en sus servicios comunicar a la pelota velocidades de 200 km/h. Si la masa de la pelota es de 100 g y el impacto dura 0,15 s, ¿qué fuerza media ha actuado sobre la pelota?",
-            // solucion: `
-            //     <div class='paso'>
-            //         \\( F \\cdot 0,15 = 0,100 \\cdot 55,5 \\implies F = 5,55 / 0,15 \\)<br>
-            //         <span class='resultado'>F = 37,0 N</span>
-            //     </div>
-            // `
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Conversión de unidades al S.I.:</strong><br>
+                    Para trabajar correctamente, debemos pasar la masa a kilogramos y la velocidad a metros por segundo:<br>
+                    - Masa: \\( m = 100 \\text{ g} = 0,1 \\text{ kg} \\)<br>
+                    - Velocidad inicial: \\( v_0 = 0 \\text{ m/s} \\) (la pelota parte del reposo en el punto de impacto)<br>
+                    - Velocidad final: \\( v_f = 200 \\text{ km/h} = \\frac{200}{3,6} \\approx 55,56 \\text{ m/s} \\)<br>
+                    - Tiempo: \\( \\Delta t = 0,15 \\text{ s} \\)
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 2: Relación entre Impulso y Cantidad de Movimiento:</strong><br>
+                    La fuerza media (\\( F \\)) multiplicada por el tiempo de contacto es igual a la variación de la cantidad de movimiento:<br>
+                    \\[ F \\cdot \\Delta t = m \\cdot (v_f - v_0) \\]
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 3: Cálculo de la Fuerza Media:</strong><br>
+                    Despejamos la fuerza y sustituimos los valores:<br>
+                    \\[ F = \\frac{m \\cdot v_f}{\\Delta t} \\]
+                    \\[ F = \\frac{0,1 \\cdot 55,56}{0,15} = \\frac{5,556}{0,15} \\approx 37,04 \\text{ N} \\]
+                    <span class='resultado'>Resultado: \\( F \\approx 37,04 \\text{ N} \\)</span>
+                </div>
+            `
         },
         {
-            titulo: "Problema 3: Pelota frontón",
+            titulo: "Problema 3: Pelota de frontón",
             enunciado: "Una pelota de 160 g llega a la pared de un frontón con una velocidad de 50 m/s. Si permanece en contacto con la pared durante 0,2 s y sale rebotada en la misma dirección con igual velocidad, calcula: <br> a) El impulso de la pared sobre la pelota. <br> b) La fuerza media que opone la pared.",
-            // solucion: `
-            //     <div class='paso'>
-            //         \\( I = m(v_f - v_0) = 0,16(50 - (-50)) = 16 \\text{ N·s} \\)<br>
-            //         \\( F = I / t = 16 / 0,2 \\)<br>
-            //         <span class='resultado'>F = 80 N</span>
-            //     </div>
-            // `
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Datos y criterio de signos:</strong><br>
+                    Establecemos el sentido de salida (rebote) como positivo. Por tanto, la velocidad de llegada será negativa.<br>
+                    - Masa: \\( m = 160 \\text{ g} = 0,16 \\text{ kg} \\)<br>
+                    - Velocidad inicial: \\( v_0 = -50 \\text{ m/s} \\)<br>
+                    - Velocidad final: \\( v_f = 50 \\text{ m/s} \\)<br>
+                    - Tiempo: \\( \\Delta t = 0,2 \\text{ s} \\)
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 2: Cálculo del impulso (Apartado a):</strong><br>
+                    El impulso (\\( I \\)) es igual a la variación de la cantidad de movimiento:<br>
+                    \\[ I = \\Delta p = m \\cdot (v_f - v_0) \\]
+                    \\[ I = 0,16 \\cdot [50 - (-50)] \\]
+                    \\[ I = 0,16 \\cdot 100 = 16 \\text{ kg} \\cdot \\text{m/s} \\]
+                    <span class='resultado'>Resultado del impulso: \\( I = 16 \\text{ N} \\cdot \\text{s} \\)</span>
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 3: Cálculo de la fuerza media (Apartado b):</strong><br>
+                    Utilizamos la definición de impulso en función de la fuerza media (\\( F_m \\)):<br>
+                    \\[ I = F_m \\cdot \\Delta t \\]
+                    Despejamos la fuerza:<br>
+                    \\[ F_m = \\frac{I}{\\Delta t} \\]
+                    \\[ F_m = \\frac{16}{0,2} = 80 \\text{ N} \\]
+                    <span class='resultado'>Resultado de la fuerza media: \\( F_m = 80 \\text{ N} \\)</span>
+                </div>
+            `
         },
         {
             titulo: "Problema 4: Futbolista",
             enunciado: "Un futbolista golpea un balón con una fuerza media de 400 N. El esférico sale lanzado formando un ángulo de 45º con la horizontal y vuelva a tocar tierra a una distancia de 35 m. ¿Cuánto tiempo ha durado el impacto entre el pie y el balón? <br> Dato: masa del balón = 250 g",
-            // solucion: `
-            //     <div class='paso'>
-            //         Primero calculamos velocidad de salida por cinemática oblicua: \\( X_{max} = v^2 \\sin(2\\alpha)/g \\implies 35 = v^2 \\sin(90^\\circ)/9,8 \\implies v = 18,52 \\text{ m/s} \\)<br>
-            //         \\( 400 \\cdot t = 0,250 \\cdot 18,52 \\)<br>
-            //         <span class='resultado'>t = 0,011 s</span>
-            //     </div>
-            // `
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Datos y conversión de unidades:</strong><br>
+                    - Fuerza media: \\( F = 400 \\text{ N} \\)<br>
+                    - Ángulo de salida: \\( \\alpha = 45^{\\circ} \\)<br>
+                    - Alcance máximo: \\( x_{max} = 35 \\text{ m} \\)<br>
+                    - Masa del balón: \\( m = 250 \\text{ g} = 0,25 \\text{ kg} \\)<br>
+                    - Gravedad: \\( g = 9,8 \\text{ m/s}^2 \\)
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 2: Cálculo del tiempo de vuelo y velocidad inicial:</strong><br>
+                    De la ecuación del eje Y del movimiento MRUA (cuando \\( y = 0 \\)): \\( \\hspace{0.5cm} 0 = v_0 \\cdot \\text{sen}(45^\\circ) \\cdot t - 4,9 \\cdot t^2 \\) <br>
+                    Sacamos factor común: \\( \\hspace{0.5cm} 0 = t \\cdot [v_0 \\cdot \\text{sen}(45^\\circ) - 4,9 \\cdot t] \\) <br>
+                    Descartando \\( t = 0 \\), el tiempo de vuelo es: \\( t = \\frac{v_0 \\cdot \\text{sen}(45^\\circ)}{4,9} \\)<br>
+                    Sustituimos este tiempo en la ecuación del eje X (movimiento MRU):<br>
+                    \\[ 35 = v_0 \\cdot \\cos(45^\\circ) \\cdot \\left( \\frac{v_0 \\cdot \\text{sen}(45^\\circ)}{4,9} \\right) \\]
+                    \\[ 35 = \\frac{v_0^2 \\cdot \\cos(45^\\circ) \\cdot \\text{sen}(45^\\circ)}{4,9} \\]
+                    Como \\( \\cos(45^\\circ) \\cdot \\text{sen}(45^\\circ) = 0,5 \\):<br>
+                    \\[ 35 = \\frac{v_0^2 \\cdot 0,5}{4,9} \\implies v_0^2 = \\frac{35 \\cdot 4,9}{0,5} = 343 \\]
+                    \\[ v_0 = \\sqrt{343} \\approx 18,52 \\text{ m/s} \\]
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 3: Aplicación del Teorema del Impulso:</strong><br>
+                    El impulso de la fuerza es igual a la variación del momento lineal (cantidad de movimiento). Considerando que el balón parte del reposo (\\( v_i = 0 \\)) y su velocidad justo tras el impacto es \\( v_f = v_0 \\): <br>
+                    \\[ F \\cdot \\Delta t = m  \\cdot (v_f - v_i) \\]
+                    \\[ 400 \\cdot \\Delta t = 0,25 \\cdot 18,52 \\]
+                    Despejamos el tiempo (\\( \\Delta t \\)):<br>
+                    \\[ \\Delta t = \\frac{4,63}{400} \\approx 0,01157 \\text{ s} \\]<br>
+                    <span class='resultado'>Resultado: El impacto duró aproximadamente \\( 0,0116 \\text{ s} \\).</span>
+                </div>
+            `
         },
         {
             titulo: "Problema 5: Choque inelástico",
             enunciado: "Sobre un cuerpo en reposo de 25 kg de masa actúa, en un caso, una fuerza de 10 N durante 10 s, y en otro, una fuerza de 50 N durante 2 s. Calcula: <br> a) ¿En cuál de las dos situaciones se le comunica al cuerpo mayor velocidad? <br> b) ¿Cuánto valdrá dicha velocidad?",
-            // solucion: `
-            //     <div class='paso'>
-            //         \\( m_1 v_1 + m_2 v_2 = (m_1+m_2)V_f \\implies 50(3) + 70(-2) = 120 V_f \\)<br>
-            //         \\( 150 - 140 = 120 V_f \\)<br>
-            //         <span class='resultado'>V = 0,083 m/s</span>
-            //     </div>
-            // `
+            solucion: `
+                <div class='paso'>
+                    <strong>Análisis del concepto de Impulso:</strong><br>
+                    El teorema del impulso mecánico establece que el impulso (\\( I = F \\cdot t \\)) es igual a la variación de la cantidad de movimiento (\\( \\Delta p = m \\cdot \\Delta v \\)).<br>
+                    Como el cuerpo parte del reposo (\\( v_i = 0 \\)), la velocidad final depende directamente del impulso total recibido:<br>
+                    \\[ F \\cdot t = m \\cdot v_f \\]
+                    <strong>Cálculo del impulso en ambos casos:</strong><br>
+                    - <strong>Caso 1:</strong> \\( \\hspace{0.25cm} I_1 = F_1 \\cdot t_1 = 10 \\text{ N} \\cdot 10 \\text{ s} = 100 \\text{ N} \\cdot \\text{s} \\)<br>
+                    - <strong>Caso 2:</strong> \\( \\hspace{0.25cm} I_2 = F_2 \\cdot t_2 = 50 \\text{ N} \\cdot 2 \\text{ s} = 100 \\text{ N} \\cdot \\text{s} \\)<br>
+                    Al observar que los productos son iguales, concluimos que el impulso comunicado es el mismo en ambos escenarios.
+                </div>
+
+                <div class='paso'>
+                    <strong>a)</strong><br>
+                    Puesto que la masa es la misma y el impulso recibido es idéntico (100 N·s), el cambio de velocidad será el mismo para ambos casos.<br>
+                    <span class='resultado'>Resultado: En ambas situaciones se comunica la misma velocidad.</span>
+                </div>
+
+                <div class='paso'>
+                    <strong>b)</strong><br>
+                    Utilizamos la masa de \\( m = 25 \\text{ kg} \\) para despejar la velocidad final de la ecuación del impulso:<br>
+                    \\[ v_f = \\frac{I}{m} \\]
+                    \\[ v_f = \\frac{100 \\text{ N} \\cdot \\text{s}}{25 \\text{ kg}} = 4 \\text{ m/s} \\]
+                    <span class='resultado'>Resultado: La velocidad final es de 4 m/s.</span>
+                </div>
+            `
         },
         {
             titulo: "Problema 6: Cambio en cuerpo",
             enunciado: "A un cuerpo de 10 kg de masa que se mueve con una velocidad de 1 m/s, se le impulsa en el sentido del movimiento con una fuerza de 5 N durante 2s. Determina la nueva velocidad del cuerpo.",
-            // solucion: `
-            //     <div class='paso'>
-            //         \\( M(5) = (M/2)(2) + (M/2)v_2 \\implies 5 = 1 + 0,5 v_2 \\implies 4 = 0,5 v_2 \\)<br>
-            //         <span class='resultado'>v2 = 8 m/s</span>
-            //     </div>
-            // `
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Identificación de datos iniciales:</strong><br>
+                    - Masa del cuerpo: \\( m = 10 \\text{ kg} \\)<br>
+                    - Velocidad inicial: \\( v_0 = 1 \\text{ m/s} \\)<br>
+                    - Fuerza aplicada: \\( F = 5 \\text{ N} \\)<br>
+                    - Tiempo de aplicación: \\( \\Delta t = 2 \\text{ s} \\)
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 2: Aplicación del Teorema del Impulso Mecánico:</strong><br>
+                    El impulso total aplicado es igual a la variación de la cantidad de movimiento (momento lineal) del cuerpo:<br>
+                    \\[ I = F \\cdot \\Delta t = \\Delta p \\]
+                    \\[ F \\cdot \\Delta t = m \\cdot v_f - m \\cdot v_0 \\]
+                    Como la fuerza se aplica en el mismo sentido del movimiento, ambos términos de velocidad tienen el mismo signo.<br>
+                    Sustituimos los datos conocidos para despejar la velocidad final (\\( v_f \\)):<br>
+                    \\[ 5 \\cdot 2 = 10 \\cdot v_f - 10 \\cdot 1 \\]
+                    \\[ 10 = 10 \\cdot v_f - 10 \\]
+                    Pasamos el término negativo al otro lado de la igualdad:<br>
+                    \\[ 10 + 10 = 10 \\cdot v_f \\]
+                    \\[ 20 = 10 \\cdot v_f \\]
+                    \\[ v_f = \\frac{20}{10} = 2 \\text{ m/s} \\]
+                    <span class='resultado'>Resultado: La nueva velocidad del cuerpo es de 2 m/s.</span>
+                </div>
+            `
         }
     ],
     "conservacion": [
         {
             titulo: "Problema 1: Bala en saco de arena",
             enunciado: "Una bala de 17 g de masa se lanza contra un saco de arena de 1500 g, quedándose incrustada en él. El conjunto bala-saco se mueve, tras el impacto, con una velocidad de 0,64 m/s. Determinar la velocidad de la bala antes del impacto, considerando despreciables los rozamientos.",
-            // solucion: `
-            //     <div class='paso'>
-            //         \\( F \\cdot \\Delta t = m(v_f - v_0) \\implies 200 \\cdot \\Delta t = 0,05(40 - (-20)) \\)<br>
-            //         <span class='resultado'>t = 0,015 s</span>
-            //     </div>
-            // `
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Identificación de datos y conversión al S.I.:</strong><br>
+                    - Masa de la bala: \\( m_1 = 17 \\text{ g} = 0,017 \\text{ kg} \\)<br>
+                    - Masa del saco: \\( m_2 = 1500 \\text{ g} = 1,5 \\text{ kg} \\)<br>
+                    - Velocidad inicial del saco: \\( v_2 = 0 \\text{ m/s} \\) (está en reposo)<br>
+                    - Velocidad final del conjunto (bala + saco): \\( V = 0,64 \\text{ m/s} \\)<br>
+                    - Velocidad inicial de la bala: \\( v_1 = ? \\)
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 2: Aplicación del Principio de Conservación del Momento Lineal:</strong><br>
+                    El momento lineal total antes del impacto debe ser igual al momento lineal total después del impacto:<br>
+                    \\[ p_{inicial} = p_{final} \\]
+                    \\[ m_1 \\cdot v_1 + m_2 \\cdot v_2 = (m_1 + m_2) \\cdot V \\]
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 3: Sustitución de valores y simplificación:</strong><br>
+                    Como el saco está en reposo inicialmente (\\( v_2 = 0 \\)), el término \\( m_2 \\cdot v_2 \\) se anula:<br>
+                    \\[ 0,017 \\cdot v_1 + 1,5 \\cdot 0 = (0,017 + 1,5) \\cdot 0,64 \\]
+                    \\[ 0,017 \\cdot v_1 = 1,517 \\cdot 0,64 \\]
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 4: Cálculo de la velocidad de la bala:</strong><br>
+                    Realizamos las operaciones pertinentes:<br>
+                    \\[ 0,017 \\cdot v_1 = 0,97088 \\]
+                    \\[ v_1 = \\frac{0,97088}{0,017} \\approx 57,11 \\text{ m/s} \\]
+                    <span class='resultado'>Resultado: La velocidad de la bala antes del impacto era de aproximadamente \\( 57,11 \\text{ m/s} \\).</span>
+                </div>
+            `
         },
                 {
-            titulo: "Problema 2: Pez come",
+            titulo: "Problema 2: Choque de peces",
             enunciado: "Un pez de 6 kg lleva una velocidad horizontal de 0,4 m/s cuando se traga otro pez de 250 g, que venía en la misma dirección y sentido contrario a una velocidad de 1,6 m/s. ¿Qué velocidad tendrá el pez después de haber comido?",
-            // solucion: `
-            //     <div class='paso'>
-            //         \\( F \\cdot \\Delta t = m(v_f - v_0) \\implies 200 \\cdot \\Delta t = 0,05(40 - (-20)) \\)<br>
-            //         <span class='resultado'>t = 0,015 s</span>
-            //     </div>
-            // `
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Identificación de datos y criterio de signos:</strong><br>
+                    Consideraremos positiva la dirección del pez grande (hacia la derecha).<br>
+                    - Pez grande: \\( m_1 = 6 \\text{ kg} \\), \\( v_1 = 0,4 \\text{ m/s} \\)<br>
+                    - Pez pequeño: \\( m_2 = 250 \\text{ g} = 0,25 \\text{ kg} \\), \\( v_2 = -1,6 \\text{ m/s} \\) (signo negativo por ir en sentido contrario).<br>
+                    - Masa final del conjunto: \\( M = m_1 + m_2 = 6,25 \\text{ kg} \\)
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 2: Aplicación del Principio de Conservación del Momento Lineal:</strong><br>
+                    La cantidad de movimiento total antes de comer debe ser igual a la cantidad de movimiento total después:<br>
+                    \\[ p_{inicial} = p_{final} \\]
+                    \\[ m_1 \\cdot v_1 + m_2 \\cdot v_2 = (m_1 + m_2) \\cdot V_f \\]
+                    Donde \\( V_f \\) es la velocidad final del pez después de haber comido.<br>
+                    Sustituimos respetando los signos establecidos:<br>
+                    \\[ 6 \\cdot 0,4 + 0,25 \\cdot (-1,6) = 6,25 \\cdot V_f \\]
+                    \\[ 2,4 - 0,4 = 6,25 \\cdot V_f \\]
+                    \\[ 2 = 6,25 \\cdot V_f \\]
+                    Despejamos la velocidad final del pez:<br>
+                    \\[ V_f = \\frac{2}{6,25} = 0,32 \\text{ m/s} \\]
+                    Como el resultado es positivo, el pez sigue moviéndose en la dirección original del pez grande.<br>
+                    <span class='resultado'>Resultado: La velocidad final del pez es de 0,32 m/s.</span>
+                </div>
+            `
         },
         {
             titulo: "Problema 3: Proyectil de cañon",
             enunciado: "Un vagón militar provisto de un cañón tiene una masa de 4000 kg y viaja a 72 km/h por una vía recta en terreno llano. En cierto momento, el cañón dispara un proyectil de 20 kg en la misma dirección y sentido de la marcha con una rapidez de 320 m/s respecto del suelo. Determinar la velocidad del vagón tras el disparo.",
-            // solucion: `
-            //     <div class='paso'>
-            //         \\( F \\cdot \\Delta t = m(v_f - v_0) \\implies 200 \\cdot \\Delta t = 0,05(40 - (-20)) \\)<br>
-            //         <span class='resultado'>t = 0,015 s</span>
-            //     </div>
-            // `
+            solucion: `
+                <div class='paso'>
+                    <strong>Paso 1: Identificación de datos y conversión al S.I.:</strong><br>
+                    Es fundamental trabajar con unidades homogéneas. Convertimos la velocidad del vagón:<br>
+                    - Masa total inicial (vagón + proyectil): \\( M = 4000 \\text{ kg} \\)<br>
+                    - Velocidad inicial del conjunto: \\( v_0 = 72 \\text{ km/h} = \\frac{72}{3,6} = 20 \\text{ m/s} \\)<br>
+                    - Masa del proyectil: \\( m_p = 20 \\text{ kg} \\)<br>
+                    - Masa del vagón tras el disparo: \\( m_v = 4000 - 20 = 3980 \\text{ kg} \\)<br>
+                    - Velocidad del proyectil (respecto al suelo): \\( v_p = 320 \\text{ m/s} \\)
+                </div>
+
+                <div class='paso'>
+                    <strong>Paso 2: Planteamiento de la Conservación del Momento Lineal:</strong><br>
+                    Dado que no actúan fuerzas externas en el eje horizontal (rozamientos despreciables), el momento lineal antes del disparo es igual al momento lineal después:<br>
+                    \\[ p_{inicial} = p_{final} \\]
+                    \\[ M \\cdot v_0 = m_v \\cdot v_v + m_p \\cdot v_p \\]
+                    Donde \\( v_v \\) es la velocidad del vagón que queremos hallar.
+                    Sustituimos los datos en la ecuación:<br>
+                    \\[ 4000 \\cdot 20 = 3980 \\cdot v_v + 20 \\cdot 320 \\]
+                    \\[ 80000 = 3980 \\cdot v_v + 6400 \\]
+                    Despejamos \\( v_v \\):<br>
+                    \\[ 80000 - 6400 = 3980 \\cdot v_v \\]
+                    \\[ 73600 = 3980 \\cdot v_v \\]
+                    \\[ v_v = \\frac{73600}{3980} \\approx 18,49 \\text{ m/s} \\]
+                    Como referencia, esta velocidad equivale a unos \\( 66,56 \\text{ km/h} \\). El vagón ha frenado debido al disparo.<br>
+                    <span class='resultado'>Resultado: La velocidad del vagón tras el disparo es de 18,49 m/s.</span>
+                </div>
+            `
         },
         {
             titulo: "Problema 4: Colisión de carritos",
