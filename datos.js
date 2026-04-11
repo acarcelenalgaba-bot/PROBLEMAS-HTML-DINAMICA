@@ -444,6 +444,7 @@ const baseDatosProblemas = {
                     \\[ F_1 = k \\cdot \\frac{|q_1 \\cdot q_2|}{L^2} = 9 \\cdot 10^9 \\cdot \\frac{(5 \\cdot 10^{-9}) \\cdot (5 \\cdot 10^{-9})}{(0,6)^2} \\]
                     \\[ F_1 = 9 \\cdot 10^9 \\cdot \\frac{25 \\cdot 10^{-18}}{0,36} = \\frac{225 \\cdot 10^{-9}}{0,36} = 6,25 \\cdot 10^{-7} \\text{ N} \\]
                     Dado que el triángulo es equilátero, el ángulo que forma cada fuerza con el eje vertical (la bisectriz) es de \\(30^\\circ\\). La fuerza total neta será el doble de la componente vertical de \\(F_1\\):<br>
+                    <div style='text-align: center; margin-bottom: 20px;'> <img src='img/fe_3c.png' style='max-width: 80%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
                     \\[ F_{total} = 2 \\cdot F_y = 2 \\cdot F_1 \\cdot \\cos(30^\\circ) = 2 \\cdot 6,25 \\cdot 10^{-7} \\cdot \\frac{\\sqrt{3}}{2} \\]
                     <span class='resultado'>Resultado: &nbsp \\( F_{total} = 6,25 \\cdot \\sqrt{3} \\cdot 10^{-7} \\approx 1,08 \\cdot 10^{-6} \\text{ N} \\) (hacia abajo)</span>
                 </div>
