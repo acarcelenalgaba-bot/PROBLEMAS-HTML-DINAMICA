@@ -1139,7 +1139,7 @@ const baseDatosProblemas = {
                     - Masa de la pelota: \\( m = 50 \\text{ g} = 0,05 \\text{ kg} \\)<br>
                     - Velocidad inicial: \\( v_0 = -20 \\text{ m/s} \\) (negativa porque va en sentido opuesto al final)<br>
                     - Velocidad final: \\( v_f = 2 \\cdot 20 \\text{ m/s} = 40 \\text{ m/s} \\)<br>
-                    - Fuerza aplicada: \\( F = 200 \\text{ N...} \\)
+                    - Fuerza aplicada: \\( F = 200 \\text{ N} \\)
                 </div>
 
                 <div class='paso'>
