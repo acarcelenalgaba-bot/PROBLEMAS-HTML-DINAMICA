@@ -78,8 +78,8 @@ const baseDatosProblemas = {
         {
             titulo: "Problema 3: Asteroide en Júpiter",
             enunciado: `La palabra Júpiter proviene de la mitología romana, padre de dioses y hombres. Júpiter es el planeta más grande del Sistema Solar y posee 80 lunas. Considera los datos de los cuerpos celestes de la siguiente tabla y determina: <br>
-            <table border="1" style="border-collapse: collapse; width: 100%; text-align: center; margin-bottom: 15px;">
-                <tr style="background-color: #f2f2f2;">
+            <table border="1" style='border-collapse: collapse; width: 100%; text-align: center; margin-bottom: 15px;">
+                <tr style='background-color: #f2f2f2;">
                     <th>Cuerpo Celeste</th>
                     <th>Masa (kg)</th>
                     <th>Diámetro (km)</th>
@@ -122,7 +122,7 @@ const baseDatosProblemas = {
                 </div>
                 <div class='paso'>
                     <strong>d) Punto nulo desde Ganímedes:</strong><br>
-                    <iframe src="simulador_jupiter.html" width="100%" height="620" style="border:1px solid #ddd; border-radius:8px; background:#fff;"></iframe>
+                    <iframe src="simulador_jupiter.html" width="100%" height="620" style='border:1px solid #ddd; border-radius:8px; background:#fff;"></iframe>
                     Queremos colocar el asteroide en un punto entre Júpiter y Ganímedes donde las fuerzas de atracción se anulen. Es decir, Júpiter tira hacia la izquierda con la misma fuerza que Ganímedes tira hacia la derecha. <br> Llamamos x a la distancia desde el asteroide hasta Ganímedes. La distancia desde el asteroide hasta Júpiter será d−x. <br> 
                     Igualamos los módulos de ambas fuerzas gravitatorias:
                     \\[ G \\cdot \\frac{M_J \\cdot m}{(d - x)^2} =  G \\cdot \\frac{M_G \\cdot m}{x^2} \\]
@@ -417,7 +417,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 2: Cargas en triángulo",
-            enunciado: "Tres cargas eléctricas de 5 nC, dos positivas fijas y una negativa libre, se sitúan en los vértices de un triángulo equilátero de 60 cm de lado. Sabiendo que la masa de la carga negativa es de 5 g, determina: <br> a) En que dirección comienza a moverse. <br> b) ¿Qué movimiento realiza la carga libre a lo largo del tiempo? <br> c) Calcula la fuerza que experimenta la carga libre en el vértice del triángulo. <br> d) Obtén la aceleración en dicho vértice. <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_6.png' style='max-width: 80%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> \\( \\ce{Datos: K = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}; 1 \\\ nC = 10^{-9} \\\ C } \\)",
+            enunciado: "Tres cargas eléctricas de 5 nC, dos positivas fijas y una negativa libre, se sitúan en los vértices de un triángulo equilátero de 60 cm de lado. Sabiendo que la masa de la carga negativa es de 5 g, determina: <br> a) En que dirección comienza a moverse. <br> b) ¿Qué movimiento realiza la carga libre a lo largo del tiempo? <br> c) Calcula la fuerza que experimenta la carga libre en el vértice del triángulo. <br> d) Obtén la aceleración en dicho vértice. <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_6.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> \\( \\ce{Datos: K = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}; 1 \\\ nC = 10^{-9} \\\ C } \\)",
             solucion: `
                 <div class='paso'>
                     <strong>Paso previo: Unidades al Sistema Internacional:</strong><br>
@@ -444,7 +444,7 @@ const baseDatosProblemas = {
                     \\[ F_1 = k \\cdot \\frac{|q_1 \\cdot q_2|}{L^2} = 9 \\cdot 10^9 \\cdot \\frac{(5 \\cdot 10^{-9}) \\cdot (5 \\cdot 10^{-9})}{(0,6)^2} \\]
                     \\[ F_1 = 9 \\cdot 10^9 \\cdot \\frac{25 \\cdot 10^{-18}}{0,36} = \\frac{225 \\cdot 10^{-9}}{0,36} = 6,25 \\cdot 10^{-7} \\text{ N} \\]
                     Dado que el triángulo es equilátero, el ángulo que forma cada fuerza con el eje vertical (la bisectriz) es de \\(30^\\circ\\). La fuerza total neta será el doble de la componente vertical de \\(F_1\\):<br>
-                    <div style='text-align: center; margin-bottom: 20px;'> <img src='img/fe_3c.png' style='max-width: 80%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
+                    <div style='text-align: center; margin-bottom: 20px;'> <img src='img/fe_3c.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
                     \\[ F_{total} = 2 \\cdot F_y = 2 \\cdot F_1 \\cdot \\cos(30^\\circ) = 2 \\cdot 6,25 \\cdot 10^{-7} \\cdot \\frac{\\sqrt{3}}{2} \\]
                     <span class='resultado'>Resultado: &nbsp \\( F_{total} = 6,25 \\cdot \\sqrt{3} \\cdot 10^{-7} \\approx 1,08 \\cdot 10^{-6} \\text{ N} \\) (hacia abajo)</span>
                 </div>
@@ -458,7 +458,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 3: Radiación cósmica",
-            enunciado: "La radiación cósmica tiene una influencia directa en nuestro planeta. La teoría más asentada sobre la formación de tormentas apunta a la radiación cósmica como origen de las mismas. En un laboratorio de nanotecnología, se investiga el comportamiento de partículas cargadas en dispositivos de detección de polvo cósmico. En un experimento, tres pequeñas esferas con carga están suspendidas en un campo eléctrico controlado según el siguiente esquema. Determina: <br> a) La fuerza que experimenta la carga 1. <br> b) La aceleración que experimenta la carga 1, cuya masa es de 10 g. <br> c) Indica qué bosones se intercambian en la interacción descrita. <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_7.png' style='max-width: 25%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>  <br> \\( \\ce{Datos: K = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}; 1 \\\ \\mu \\text{C} = 10^{-6} \\\ \\text{C} }\\)",
+            enunciado: "La radiación cósmica tiene una influencia directa en nuestro planeta. La teoría más asentada sobre la formación de tormentas apunta a la radiación cósmica como origen de las mismas. En un laboratorio de nanotecnología, se investiga el comportamiento de partículas cargadas en dispositivos de detección de polvo cósmico. En un experimento, tres pequeñas esferas con carga están suspendidas en un campo eléctrico controlado según el siguiente esquema. Determina: <br> a) La fuerza que experimenta la carga 1. <br> b) La aceleración que experimenta la carga 1, cuya masa es de 10 g. <br> c) Indica qué bosones se intercambian en la interacción descrita. <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_7.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>  <br> \\( \\ce{Datos: K = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}; 1 \\\ \\mu \\text{C} = 10^{-6} \\\ \\text{C} }\\)",
             solucion: `
                 <div class='paso'>
                     <strong>Paso 1: Análisis geométrico previo:</strong><br>
@@ -494,7 +494,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 4: 1-bromopropano",
-            enunciado: "El 1-bromopropano es un disolvente empleado para limpiar las superficies de las pantallas OLEDs. Para formar el 1-bromopropano se lleva a cabo una reacción orgánica donde el ion bromuro \\( \\ce{Br^–} \\) ataca la carga positiva del carbocatión (propano). El ion bromuro se encuentra rodeado de 3 cargas positivas (carbocationes). En los siguientes esquemas se muestran tanto la reacción orgánica (1) como un diagrama de cargas (2). Determina: <br> a) La fuerza que experimenta la carga 1. <br> b) La fuerza que experimenta la carga 4. <br> c) La aceleración que experimenta la carga 1 (ion bromuro), cuya masa es de 1,33 · 10 – 22 g. <br> d) Teniendo en cuenta el diagrama de fuerzas, ¿a qué carbocatión crees que se unirá el bromuro? <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_8.png' style='max-width: 70%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>  <br> \\( \\ce{Datos: K = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}; 1 \\text{ nm} = 1 \\cdot 10^{-9} \\text{ m}} \\)",
+            enunciado: "El 1-bromopropano es un disolvente empleado para limpiar las superficies de las pantallas OLEDs. Para formar el 1-bromopropano se lleva a cabo una reacción orgánica donde el ion bromuro \\( \\ce{Br^–} \\) ataca la carga positiva del carbocatión (propano). El ion bromuro se encuentra rodeado de 3 cargas positivas (carbocationes). En los siguientes esquemas se muestran tanto la reacción orgánica (1) como un diagrama de cargas (2). Determina: <br> a) La fuerza que experimenta la carga 1. <br> b) La fuerza que experimenta la carga 4. <br> c) La aceleración que experimenta la carga 1 (ion bromuro), cuya masa es de 1,33 · 10 – 22 g. <br> d) Teniendo en cuenta el diagrama de fuerzas, ¿a qué carbocatión crees que se unirá el bromuro? <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/din_8.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>  <br> \\( \\ce{Datos: K = 9 \\cdot 10^9 N \\cdot m^2 \\cdot C^{−2}; 1 \\text{ nm} = 1 \\cdot 10^{-9} \\text{ m}} \\)",
             solucion: `
                 <div class='paso'>
                     <strong>Paso 1: Análisis geométrico y paso a unidades del S.I.:</strong><br>
@@ -550,9 +550,9 @@ const baseDatosProblemas = {
                     Para resolver el problema, primero debemos identificar todas las fuerzas que actúan sobre el paracaidista y dibujarlas en un sistema de ejes de coordenadas, donde el eje X es paralelo al plano inclinado y el eje Y es perpendicular a él.<br>
                     Las fuerzas son: el Peso (\\( \\vec{P} = m \\cdot \\vec{g} \\)), la Normal (\\( \\vec{N} \\)) ejercida por la superficie de la pirámide, y la Fuerza de Rozamiento cinético (\\( \\vec{F}_R \\)) que se opone al movimiento.<br>
                     <br>
-                    <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_1.png' style='max-width: 90%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
-                    <div style="text-align: center; margin: 20px 0;">
-                        <p style="font-size: 0.9em; color: #666; font-style: italic;">Diagrama de Cuerpo Libre (DCL) para un objeto en un plano inclinado con rozamiento.</p>
+                    <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_1.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
+                    <div style='text-align: center; margin: 20px 0;">
+                        <p style='font-size: 0.9em; color: #666; font-style: italic;">Diagrama de Cuerpo Libre (DCL) para un objeto en un plano inclinado con rozamiento.</p>
                     </div>
                     <br>
                     Descomponemos el peso en sus componentes cartesianas:<br>
@@ -609,7 +609,7 @@ const baseDatosProblemas = {
                     - Fuerza de rozamiento estático máxima: \\( F_{e,max} = \\mu_e \\cdot N = \\mu_e \\cdot m \\cdot g \\cdot \\cos(20^{\\circ}) \\) <br> 
                     <br>
                     <div style='text-align: center; margin-bottom: 20px;'> 
-                        <img src='img/pi_1.png' style='max-width: 90%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> 
+                        <img src='img/pi_1.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> 
                     </div>
                 </div>
 
@@ -644,7 +644,7 @@ const baseDatosProblemas = {
                     - Fuerza de rozamiento: \\( F_r = \\mu \\cdot N = \\mu \\cdot m \\cdot g \\cdot \\cos(25^{\\circ}) \\)<br>
                     La sumatoria de fuerzas en el eje X (dirección del movimiento) es:<br>
                     \\[ \\sum F_x = -P_x - F_r = m \\cdot a \\]
-                    <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_3.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
+                    <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_3.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
                 </div>
 
                 <div class='paso'>
@@ -740,7 +740,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 5: El gato y la lámpara",
-            enunciado: "Una lámpara de 2 kg está sobre una mesa (\\( \\mu_c = 0,3 \\)) conectada por un cable a un gato de 3 kg que cuelga por el borde. Determina: <br> a) La aceleración del sistema. <br> b) La tensión de la cuerda. <br> c) La velocidad del gato a los 1,5 segundos. <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_5.png' style='max-width: 20%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>",
+            enunciado: "Una lámpara de 2 kg está sobre una mesa (\\( \\mu_c = 0,3 \\)) conectada por un cable a un gato de 3 kg que cuelga por el borde. Determina: <br> a) La aceleración del sistema. <br> b) La tensión de la cuerda. <br> c) La velocidad del gato a los 1,5 segundos. <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_5.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>",
             solucion: `
                 <div class='paso'>
                     <strong>Paso 1: Identificación de fuerzas y datos:</strong><br>
@@ -791,7 +791,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 6: Elevación de carga en plano inclinado",
-            enunciado: "En construcción se emplea la polea fija para levantar cargas. En la edificación de un bloque de pisos turísticos se emplea un sistema de polea en un plano inclinado como en la figura. Sabiendo que el coeficiente de rozamiento cinético es \\( μ = 0,3 \\), determina: <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_6.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> a) Razona por qué es útil una polea fija. <br> b) Indica en qué sentido se mueven las masas. <br> c) Calcula la aceleración del sistema. <br> d) Halla la tensión de la cuerda.",
+            enunciado: "En construcción se emplea la polea fija para levantar cargas. En la edificación de un bloque de pisos turísticos se emplea un sistema de polea en un plano inclinado como en la figura. Sabiendo que el coeficiente de rozamiento cinético es \\( μ = 0,3 \\), determina: <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_6.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> a) Razona por qué es útil una polea fija. <br> b) Indica en qué sentido se mueven las masas. <br> c) Calcula la aceleración del sistema. <br> d) Halla la tensión de la cuerda.",
             solucion: `
                 <div class='paso'>
                     <strong>a) Utilidad de la polea fija:</strong><br>
@@ -809,7 +809,7 @@ const baseDatosProblemas = {
 
                 <div class='paso'>
                     <strong>c) Cálculo de la aceleración del sistema:</strong><br>
-                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_6c.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>
+                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_6c.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>
                     Aplicamos la segunda ley de Newton. Al moverse el sistema hacia abajo del plano, el rozamiento (\\( F_r \\)) apunta hacia arriba de la rampa:<br>
                     \\[ \\sum F = (M + m) \\cdot a \\]\n            \\[ P_{Mx} - P_m - F_r = (M + m) \\cdot a \\]\n            Calculamos el rozamiento de la masa \\( M \\):<br>
                     \\[ F_r = \\mu \\cdot M \\cdot g \\cdot \\cos(30^{\\circ}) = 0,3 \\cdot 500 \\cdot 9,8 \\cdot 0,866 = 1273,02 \\text{ N} \\]\n            Sustituimos en la ecuación principal:<br>
@@ -874,7 +874,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 8: Chiquillo trineo",
-            enunciado: "Un chiquillo se deja caer colina abajo con su trineo por la ladera de una montaña nevada que presenta una inclinación de 25º. Cuando desciende la montaña (el plano inclinado), ha recorrido 150 metros. Entonces atraviesa una capa de hielo horizontal antes de comenzar a subir una montaña nevada de 10º de inclinación. Sabiendo que existe coeficiente de rozamiento con la nieve (presente en ambos planos inclinados) y que este coeficiente es nulo con el hielo (plano horizontal), determina: <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_8.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> a) El coeficiente de rozamiento con la nieve, sabiendo que llega a la capa de hielo con una velocidad de 20 m/s. <br> b) La velocidad con la que comienza a subir la segunda montaña de 10º de inclinación. <br> c) La distancia que recorre en la segunda montaña hasta frenarse.",
+            enunciado: "Un chiquillo se deja caer colina abajo con su trineo por la ladera de una montaña nevada que presenta una inclinación de 25º. Cuando desciende la montaña (el plano inclinado), ha recorrido 150 metros. Entonces atraviesa una capa de hielo horizontal antes de comenzar a subir una montaña nevada de 10º de inclinación. Sabiendo que existe coeficiente de rozamiento con la nieve (presente en ambos planos inclinados) y que este coeficiente es nulo con el hielo (plano horizontal), determina: <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_8.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> a) El coeficiente de rozamiento con la nieve, sabiendo que llega a la capa de hielo con una velocidad de 20 m/s. <br> b) La velocidad con la que comienza a subir la segunda montaña de 10º de inclinación. <br> c) La distancia que recorre en la segunda montaña hasta frenarse.",
             solucion: `
                 <div class='paso'>
                     <strong>a) Cálculo del coeficiente de rozamiento (\\( \\mu \\)):</strong><br>
@@ -911,7 +911,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 9: Polea 30° y 45°",
-            enunciado: "Dado el siguiente sistema de cargas conectadas por una polea de cuerda inextensible, determina la aceleración del sistema y la tensión de la cuerda cuando: <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_9.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>  a) No hay rozamiento. <br> b) El rozamiento cinético es \\( μ_c = 0,05 \\).",
+            enunciado: "Dado el siguiente sistema de cargas conectadas por una polea de cuerda inextensible, determina la aceleración del sistema y la tensión de la cuerda cuando: <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_9.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>  a) No hay rozamiento. <br> b) El rozamiento cinético es \\( μ_c = 0,05 \\).",
             solucion: `
                 <div class='paso'>
                     <strong>Paso 1: Análisis de las fuerzas tangenciales (pesos en X):</strong><br>
@@ -923,7 +923,7 @@ const baseDatosProblemas = {
 
                 <div class='paso'>
                     <strong>a) Caso sin rozamiento (\\( \\mu = 0 \\)):</strong><br>
-                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_9a.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>
+                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_9a.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>
                     Aplicamos la segunda ley de Newton al sistema (Fuerza a favor - Fuerza en contra):<br>
                     \\[ P_{1x} - P_{2x} = (m_1 + m_2) \\cdot a \\]\n            
                     \\[ 490 - 346,43 = (100 + 50) \\cdot a \\]\n            
@@ -935,7 +935,7 @@ const baseDatosProblemas = {
 
                 <div class='paso'>
                     <strong>b) Caso con rozamiento (\\( \\mu_c = 0,05 \\)):</strong><br>
-                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_9b.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>
+                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/pi_9b.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br>
                     El rozamiento en ambos planos se opone al movimiento (apunta hacia la derecha):<br>
                     - \\( F_{r1} = \\mu_c \\cdot m_1 \\cdot g \\cdot \\cos(30^{\\circ}) = 0,05 \\cdot 100 \\cdot 9,8 \\cdot 0,866 = 42,43 \\text{ N} \\).<br>
                     - \\( F_{r2} = \\mu_c \\cdot m_2 \\cdot g \\cdot \\cos(45^{\\circ}) = 0,05 \\cdot 50 \\cdot 9,8 \\cdot 0,707 = 17,32 \\text{ N} \\).<br>
@@ -1028,7 +1028,7 @@ const baseDatosProblemas = {
                     - Peso total a transportar: \\( P = 2000 \\text{ N} \\).<br>
                     - Fuerza del segundo hombre (extremo derecho): \\( F_2 = P - F_1 = 2000 \\text{ N} - 900 \\text{ N} = 1100 \\text{ N} \\).<br>
                     Llamaremos \\( x \\) a la distancia desde el hombre 1 (900 N) hasta el punto donde se cuelga el peso.
-                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/eq_3.png' style='max-width: 70%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
+                    <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/eq_3.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
                 </div>
 
                 <div class='paso'>
@@ -1051,7 +1051,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 4: Equilibrio de palancas",
-            enunciado: "Calcula el valor de la fuerza A o la distancia d en cada uno de los tres sistemas mostrados para que se mantenga el equilibrio (suponiendo barra sin peso). <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/eq_4.png' style='max-width: 90%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>",
+            enunciado: "Calcula el valor de la fuerza A o la distancia d en cada uno de los tres sistemas mostrados para que se mantenga el equilibrio (suponiendo barra sin peso). <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/eq_4.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>",
             solucion: `
                 <div class='paso'>
                     <strong>Caso 1: Equilibrio con brazos iguales</strong><br>
@@ -1090,7 +1090,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 5: Equilibrio de esferas cargadas",
-            enunciado: "Dos pequeñas esferas de masa \\( m = 1 \\text{ g} \\), y de cargas eléctricas opuestas, cuelgan de hilos de igual longitud. Debido a la atracción electrostática de \\( 5,67 \\cdot 10^{-3} \\text{ N} \\), forman un ángulo \\( \\alpha \\) con la vertical. Calcula la tensión del hilo y el valor del ángulo \\( \\alpha \\). <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/eq_5.png' style='max-width: 90%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> ",
+            enunciado: "Dos pequeñas esferas de masa \\( m = 1 \\text{ g} \\), y de cargas eléctricas opuestas, cuelgan de hilos de igual longitud. Debido a la atracción electrostática de \\( 5,67 \\cdot 10^{-3} \\text{ N} \\), forman un ángulo \\( \\alpha \\) con la vertical. Calcula la tensión del hilo y el valor del ángulo \\( \\alpha \\). <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/eq_5.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> ",
             solucion: `
                 <div class='paso'>
                     <strong>Paso 1: Identificación de fuerzas y conversión al S.I.:</strong><br>
@@ -1519,7 +1519,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 7: Desintegración de partícula",
-            enunciado: "Una partícula de 4 g de masa estalla desintegrándose en tres trozos de 2, 1 y 1 g respectivamente que salen despedidos en las direcciones indicadas en la figura. Determinar las velocidades de las dos masas de 1 g. <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/mom_7.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>",
+            enunciado: "Una partícula de 4 g de masa estalla desintegrándose en tres trozos de 2, 1 y 1 g respectivamente que salen despedidos en las direcciones indicadas en la figura. Determinar las velocidades de las dos masas de 1 g. <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/mom_7.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>",
             solucion: `
                 <div class='paso'>
                     <strong>Paso 1: Identificación de datos y vectores:</strong><br>
@@ -1527,7 +1527,7 @@ const baseDatosProblemas = {
                     - Trozo 1 (\\( m = 2 \\text{ g} \\)): \\( v = 600 \\text{ m/s} \\) hacia la izquierda (eje X negativo).<br>
                     - Trozo 2 (\\( m_1 = 1 \\text{ g} \\)): Velocidad \\( v_1 \\) a \\( 30^{\\circ} \\) sobre la horizontal.<br>
                     - Trozo 3 (\\( m_2 = 1 \\text{ g} \\)): Velocidad \\( v_2 \\) a \\( 45^{\\circ} \\) bajo la horizontal.
-                <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/mom_7a.png' style='max-width: 40%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
+                <br> <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/mom_7a.png' style='width: 50rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div>
                 </div>
 
                 <div class='paso'>
