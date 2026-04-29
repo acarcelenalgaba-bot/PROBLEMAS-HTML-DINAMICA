@@ -1090,7 +1090,7 @@ const baseDatosProblemas = {
         },
         {
             titulo: "Problema 5: Equilibrio de esferas cargadas",
-            enunciado: "Dos pequeñas esferas de masa \\( m = 1 \\text{ g} \\), y de cargas eléctricas opuestas, cuelgan de hilos de igual longitud. Debido a la atracción electrostática de \\( 5,67 \\cdot 10^{-3} \\text{ N} \\), forman un ángulo \\( \\alpha \\) con la vertical. Calcula la tensión del hilo y el valor del ángulo \\( \\alpha \\). <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/eq_5.png' style='width: 40rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> ",
+            enunciado: "Dos pequeñas esferas de masa \\( m = 1 \\text{ g} \\), y de cargas eléctricas opuestas, cuelgan de hilos de igual longitud. Debido a la atracción electrostática de \\( 5,67 \\cdot 10^{-3} \\text{ N} \\), forman un ángulo \\( \\alpha \\) con la vertical. Calcula la tensión del hilo y el valor del ángulo \\( \\alpha \\). <br> <div style='text-align: center; margin-bottom: 20px;'> <img src='img/eq_5.png' style='width: 30rem; max-width: 100%;height: auto; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);'> </div> <br> ",
             solucion: `
                 <div class='paso'>
                     <strong>Paso 1: Identificación de fuerzas y conversión al S.I.:</strong><br>
